@@ -97,7 +97,7 @@
    (->> (map format-ext exts)
             (str/join "\n\n"))))
 
-(defn ^:private gen-exts
+(defn gen-exts
   [data]
   (let [exts (build-exts data)]
     (format-exts exts)))
