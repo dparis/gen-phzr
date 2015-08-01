@@ -1,7 +1,66 @@
 (ns gen-phaser.externs
   (:require [cheshire.core :as json]
-            [clojure.string :as str]))
+            [cuerdas.core :as str]))
 
+(def ^:private blacklist-constructors
+  #{"AABB"
+    "AngleLockEquation"
+    "Body"
+    "Box"
+    "Broadphase"
+    "Capsule"
+    "Circle"
+    "Constraint"
+    "ContactEquation"
+    "ContactMaterial"
+    "Convex"
+    "DistanceConstraint"
+    "Equation"
+    "EventEmitter"
+    "FrictionEquation"
+    "GSSolver"
+    "GearConstraint"
+    "Heightfield"
+    "Island"
+    "IslandManager"
+    "IslandNode"
+    "Line"
+    "LinearSpring"
+    "LockConstraint"
+    "Material"
+    "NaiveBroadphase"
+    "Narrowphase"
+    "OverlapKeeper"
+    "OverlapKeeperRecord"
+    "Particle"
+    "Phaser.FlexGrid"
+    "Phaser.FlexLayer"
+    "Plane"
+    "Point"
+    "Polygon"
+    "PrismaticConstraint"
+    "Ray"
+    "RaycastResult"
+    "RevoluteConstraint"
+    "RotationalLockEquation"
+    "RotationalSpring"
+    "RotationalVelocityEquation"
+    "SAPBroadphase"
+    "Scalar"
+    "Shape"
+    "Solver"
+    "Spring"
+    "TopDownVehicle"
+    "Utils"
+    "WheelConstraint"
+    "World"
+    "vec2"})
+
+(defn ^:private remove-blacklist-nodes
+  [data]
+  (remove #(and (blacklist-constructors (get % "longname"))
+                (= "constructor" (get % "kind")))
+          data))
 
 (defn ^:private public?
   [node]
@@ -56,48 +115,76 @@
                [c {:instance-properties ip
                    :instance-methods    im}]))))
 
+(defn ^:private format-c-lname
+  [constructor]
+  (let [lname (get constructor "longname")]
+    (cond
+      (str/contains? lname "module:")
+      (let [matches (re-matches #"^module\:(.*)\s*" lname)]
+        (nth matches 1))
+
+      :else
+      lname)))
+
 (defn ^:private format-constructor
   [constructor]
-  (let [cl-name (get constructor "longname")
-        params  (get constructor "params")]
+  (let [c-lname   (format-c-lname constructor)
+        params    (get constructor "params")
+        param-str (str/join ", "
+                            (remove #(str/contains? % ".")
+                                    (map #(get % "name") params)))]
     (format "%s = function(%s) {};"
-            cl-name
-            (str/join ", " (map #(get % "name") params)))))
+            c-lname
+            param-str)))
 
 (defn ^:private format-inst-property
   [constructor inst-property]
-  (let [cl-name (get constructor "longname")
+  (let [c-lname (format-c-lname constructor)
         ip-name (get inst-property "name")]
-    (format "%s.prototype.%s;" cl-name ip-name)))
+    (format "%s.prototype.%s;" c-lname ip-name)))
 
 (defn ^:private format-inst-method
   [constructor inst-method]
-  (let [cl-name (get constructor "longname")
-        im-name (get inst-method "name")
-        params  (get inst-method "params")]
+  (let [c-lname   (get constructor "longname")
+        im-name   (get inst-method "name")
+        params    (get inst-method "params")
+        param-str (str/join ", "
+                            (remove #(str/contains? % ".")
+                                    (map #(get % "name") params)))]
     (format "%s.prototype.%s = function(%s) {};"
-            cl-name
+            c-lname
             im-name
-            (str/join ", " (map #(get % "name") params)))))
+            param-str)))
 
 (defn ^:private format-ext
   [[c ext]]
-  (let [c-str   (format-constructor c)
+  (let [c-lname (format-c-lname c)
+        c-str   (format-constructor c)
         ip-strs (map #(format-inst-property c %) (:instance-properties ext))
         im-strs (map #(format-inst-method c %) (:instance-methods ext))]
-    (format "%s\n\n%s\n\n%s"
-            c-str
-            (str/join "\n" (sort ip-strs))
-            (str/join "\n" (sort im-strs)))))
+    (str
+     "/********************************************/\n"
+     "/* " c-lname " */\n"
+     "\n"
+     c-str "\n"
+     "\n"
+     (when-not (empty? ip-strs)
+       (str (str/join "\n" (sort ip-strs)) "\n\n"))
+     (when-not (empty? im-strs)
+       (str (str/join "\n" (sort im-strs)) "\n\n"))
+
+     "/********************************************/")))
 
 (defn ^:private format-exts
   [exts]
   (str
-   "var Phaser = {};\n\n"
-   (->> (map format-ext exts)
-            (str/join "\n\n"))))
+   "var Phaser = {};\n"
+   "var PIXI = {};\n"
+   "\n"
+   (->> (sort (map format-ext exts))
+        (str/join "\n\n\n"))))
 
 (defn gen-exts
   [data]
-  (let [exts (build-exts data)]
+  (let [exts (build-exts (remove-blacklist-nodes data))]
     (format-exts exts)))
