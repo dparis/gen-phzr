@@ -14047,7 +14047,7 @@ Object.defineProperty(PIXI.DisplayObject.prototype, 'mask', {
  * * IMPORTANT: This is a webGL only feature and will be ignored by the canvas renderer.
  * To remove filters simply set this property to 'null'
  * @property filters
- * @type Array(Filter)
+ * @type {Array.Filter}
  */
 Object.defineProperty(PIXI.DisplayObject.prototype, 'filters', {
 
@@ -14495,7 +14495,7 @@ PIXI.DisplayObjectContainer = function()
      * [read-only] The array of children of this container.
      *
      * @property children
-     * @type Array(DisplayObject)
+     * @type {Array.DisplayObject}
      * @readOnly
      */
     this.children = [];
@@ -17384,7 +17384,7 @@ PIXI.WebGLGraphics.buildRoundedRectangle = function(graphicsData, webGLData)
  * @param cpY {Number} Control point y
  * @param toX {Number} Destination point x
  * @param toY {Number} Destination point y
- * @return {Array(Number)}
+ * @return {Array.Number}
  */
 PIXI.WebGLGraphics.quadraticBezierCurve = function(fromX, fromY, cpX, cpY, toX, toY) {
 
@@ -22629,14 +22629,14 @@ PIXI.AbstractFilter = function(fragmentSrc, uniforms)
     * An array of passes - some filters contain a few steps this array simply stores the steps in a liniear fashion.
     * For example the blur filter has two passes blurX and blurY.
     * @property passes
-    * @type Array(Filter)
+    * @type {Array.Filter}
     * @private
     */
     this.passes = [this];
 
     /**
     * @property shaders
-    * @type Array(Shader)
+    * @type {Array.Shader}
     * @private
     */
     this.shaders = [];
@@ -28760,8 +28760,8 @@ Phaser.Rectangle.equals = function (a, b) {
 /**
 * Determines if the two objects (either Rectangles or Rectangle-like) have the same width and height values under strict equality.
 * @method Phaser.Rectangle.sameDimensions
-* @param {Rectangle-like} a - The first Rectangle object.
-* @param {Rectangle-like} b - The second Rectangle object.
+* @param {Rectangle} a - The first Rectangle object.
+* @param {Rectangle} b - The second Rectangle object.
 * @return {boolean} True if the object have equivalent values for the width and height properties.
 */
 Phaser.Rectangle.sameDimensions = function (a, b) {
@@ -35709,7 +35709,7 @@ Phaser.ScaleManager = function (game, width, height) {
     /**
     * The Display canvas is aligned by adjusting the margins; the last margins are stored here.
     *
-    * @property {Bounds-like} margin
+    * @property {Bounds} margin
     * @readonly
     * @protected
     */

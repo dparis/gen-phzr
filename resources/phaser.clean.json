@@ -1,7 +1,7 @@
 [
   {
-    "id": "module:PIXI",
-    "longname": "module:PIXI",
+    "id": "PIXI",
+    "longname": "PIXI",
     "name": "PIXI",
     "kind": "module",
     "description": "The [pixi.js](http://www.pixijs.com/) module/namespace.",
@@ -2218,39 +2218,39 @@
     "order": 643
   },
   {
-    "id": "module:PIXI.PIXI()",
-    "longname": "module:PIXI.PIXI",
+    "id": "PIXI.PIXI()",
+    "longname": "PIXI.PIXI",
     "name": "PIXI",
     "kind": "constructor",
     "description": "Namespace-class for [pixi.js](http://www.pixijs.com/).\n\nContains assorted static properties and enumerations.",
-    "memberof": "module:PIXI.PIXI",
+    "memberof": "PIXI.PIXI",
     "order": 705
   },
   {
-    "id": "module:PIXI.DisplayObject()",
-    "longname": "module:PIXI.DisplayObject",
+    "id": "PIXI.DisplayObject()",
+    "longname": "PIXI.DisplayObject",
     "name": "DisplayObject",
     "kind": "constructor",
     "description": "The base class for all objects that are rendered on the screen.\nThis is an abstract class and should not be used on its own rather it should be extended.",
-    "memberof": "module:PIXI.DisplayObject",
+    "memberof": "PIXI.DisplayObject",
     "order": 715
   },
   {
-    "id": "module:PIXI.DisplayObjectContainer()",
-    "longname": "module:PIXI.DisplayObjectContainer",
+    "id": "PIXI.DisplayObjectContainer()",
+    "longname": "PIXI.DisplayObjectContainer",
     "name": "DisplayObjectContainer",
     "kind": "constructor",
     "description": "A DisplayObjectContainer represents a collection of display objects.\nIt is the base class of all display objects that act as a container for other objects.",
-    "memberof": "module:PIXI.DisplayObjectContainer",
+    "memberof": "PIXI.DisplayObjectContainer",
     "order": 756
   },
   {
-    "id": "module:PIXI.Sprite()",
-    "longname": "module:PIXI.Sprite",
+    "id": "PIXI.Sprite()",
+    "longname": "PIXI.Sprite",
     "name": "Sprite",
     "kind": "constructor",
     "description": "The Sprite object is the base for all textured objects that are rendered to the screen",
-    "memberof": "module:PIXI.Sprite",
+    "memberof": "PIXI.Sprite",
     "params": [
       {
         "type": {
@@ -2265,12 +2265,12 @@
     "order": 774
   },
   {
-    "id": "module:PIXI.SpriteBatch()",
-    "longname": "module:PIXI.SpriteBatch",
+    "id": "PIXI.SpriteBatch()",
+    "longname": "PIXI.SpriteBatch",
     "name": "SpriteBatch",
     "kind": "constructor",
     "description": "The SpriteBatch class is a really fast version of the DisplayObjectContainer \nbuilt solely for speed, so use when you need a lot of sprites or particles.\nAnd it's extremely easy to use : \n\n    var container = new PIXI.SpriteBatch();\n \n    stage.addChild(container);\n \n    for(var i  = 0; i < 100; i++)\n    {\n        var sprite = new PIXI.Sprite.fromImage(\"myImage.png\");\n        container.addChild(sprite);\n    }\nAnd here you have a hundred sprites that will be renderer at the speed of light",
-    "memberof": "module:PIXI.SpriteBatch",
+    "memberof": "PIXI.SpriteBatch",
     "params": [
       {
         "type": {
@@ -2284,12 +2284,12 @@
     "order": 792
   },
   {
-    "id": "module:PIXI.Stage()",
-    "longname": "module:PIXI.Stage",
+    "id": "PIXI.Stage()",
+    "longname": "PIXI.Stage",
     "name": "Stage",
     "kind": "constructor",
     "description": "A Stage represents the root of the display tree. Everything connected to the stage is rendered",
-    "memberof": "module:PIXI.Stage",
+    "memberof": "PIXI.Stage",
     "params": [
       {
         "type": {
@@ -2304,20 +2304,20 @@
     "order": 796
   },
   {
-    "id": "module:PIXI.PolyK()",
-    "longname": "module:PIXI.PolyK",
+    "id": "PIXI.PolyK()",
+    "longname": "PIXI.PolyK",
     "name": "PolyK",
     "kind": "constructor",
     "description": "Based on the Polyk library http://polyk.ivank.net released under MIT licence.\nThis is an amazing lib!\nSlightly modified by Mat Groves (matgroves.com);",
-    "memberof": "module:PIXI.PolyK",
+    "memberof": "PIXI.PolyK",
     "order": 805
   },
   {
-    "id": "module:PIXI.PixiShader()",
-    "longname": "module:PIXI.PixiShader",
+    "id": "PIXI.PixiShader()",
+    "longname": "PIXI.PixiShader",
     "name": "PixiShader",
     "kind": "constructor",
-    "memberof": "module:PIXI.PixiShader",
+    "memberof": "PIXI.PixiShader",
     "params": [
       {
         "type": {
@@ -2332,11 +2332,11 @@
     "order": 815
   },
   {
-    "id": "module:PIXI.PixiFastShader()",
-    "longname": "module:PIXI.PixiFastShader",
+    "id": "PIXI.PixiFastShader()",
+    "longname": "PIXI.PixiFastShader",
     "name": "PixiFastShader",
     "kind": "constructor",
-    "memberof": "module:PIXI.PixiFastShader",
+    "memberof": "PIXI.PixiFastShader",
     "params": [
       {
         "type": {
@@ -2351,11 +2351,11 @@
     "order": 831
   },
   {
-    "id": "module:PIXI.StripShader()",
-    "longname": "module:PIXI.StripShader",
+    "id": "PIXI.StripShader()",
+    "longname": "PIXI.StripShader",
     "name": "StripShader",
     "kind": "constructor",
-    "memberof": "module:PIXI.StripShader",
+    "memberof": "PIXI.StripShader",
     "params": [
       {
         "type": {
@@ -2370,11 +2370,11 @@
     "order": 841
   },
   {
-    "id": "module:PIXI.PrimitiveShader()",
-    "longname": "module:PIXI.PrimitiveShader",
+    "id": "PIXI.PrimitiveShader()",
+    "longname": "PIXI.PrimitiveShader",
     "name": "PrimitiveShader",
     "kind": "constructor",
-    "memberof": "module:PIXI.PrimitiveShader",
+    "memberof": "PIXI.PrimitiveShader",
     "params": [
       {
         "type": {
@@ -2389,11 +2389,11 @@
     "order": 850
   },
   {
-    "id": "module:PIXI.ComplexPrimitiveShader()",
-    "longname": "module:PIXI.ComplexPrimitiveShader",
+    "id": "PIXI.ComplexPrimitiveShader()",
+    "longname": "PIXI.ComplexPrimitiveShader",
     "name": "ComplexPrimitiveShader",
     "kind": "constructor",
-    "memberof": "module:PIXI.ComplexPrimitiveShader",
+    "memberof": "PIXI.ComplexPrimitiveShader",
     "params": [
       {
         "type": {
@@ -2408,21 +2408,21 @@
     "order": 859
   },
   {
-    "id": "module:PIXI.WebGLGraphics()",
-    "longname": "module:PIXI.WebGLGraphics",
+    "id": "PIXI.WebGLGraphics()",
+    "longname": "PIXI.WebGLGraphics",
     "name": "WebGLGraphics",
     "kind": "constructor",
     "description": "A set of functions used by the webGL renderer to draw the primitive graphics data",
-    "memberof": "module:PIXI.WebGLGraphics",
+    "memberof": "PIXI.WebGLGraphics",
     "order": 868
   },
   {
-    "id": "module:PIXI.WebGLRenderer()",
-    "longname": "module:PIXI.WebGLRenderer",
+    "id": "PIXI.WebGLRenderer()",
+    "longname": "PIXI.WebGLRenderer",
     "name": "WebGLRenderer",
     "kind": "constructor",
     "description": "The WebGLRenderer draws the stage and all its content onto a webGL enabled canvas. This renderer\nshould be used for browsers that support webGL. This Render works by automatically managing webGLBatchs.\nSo no need for Sprite Batches or Sprite Clouds.\nDon't forget to add the view to your DOM or you will not see anything :)",
-    "memberof": "module:PIXI.WebGLRenderer",
+    "memberof": "PIXI.WebGLRenderer",
     "params": [
       {
         "type": {
@@ -2525,11 +2525,11 @@
     "order": 884
   },
   {
-    "id": "module:PIXI.WebGLBlendModeManager()",
-    "longname": "module:PIXI.WebGLBlendModeManager",
+    "id": "PIXI.WebGLBlendModeManager()",
+    "longname": "PIXI.WebGLBlendModeManager",
     "name": "WebGLBlendModeManager",
     "kind": "constructor",
-    "memberof": "module:PIXI.WebGLBlendModeManager",
+    "memberof": "PIXI.WebGLBlendModeManager",
     "params": [
       {
         "type": {
@@ -2544,11 +2544,11 @@
     "order": 912
   },
   {
-    "id": "module:PIXI.FilterTexture()",
-    "longname": "module:PIXI.FilterTexture",
+    "id": "PIXI.FilterTexture()",
+    "longname": "PIXI.FilterTexture",
     "name": "FilterTexture",
     "kind": "constructor",
-    "memberof": "module:PIXI.FilterTexture",
+    "memberof": "PIXI.FilterTexture",
     "params": [
       {
         "type": {
@@ -2590,12 +2590,12 @@
     "order": 1000
   },
   {
-    "id": "module:PIXI.CanvasBuffer()",
-    "longname": "module:PIXI.CanvasBuffer",
+    "id": "PIXI.CanvasBuffer()",
+    "longname": "PIXI.CanvasBuffer",
     "name": "CanvasBuffer",
     "kind": "constructor",
     "description": "Creates a Canvas element of the given size.",
-    "memberof": "module:PIXI.CanvasBuffer",
+    "memberof": "PIXI.CanvasBuffer",
     "params": [
       {
         "type": {
@@ -2619,30 +2619,30 @@
     "order": 1009
   },
   {
-    "id": "module:PIXI.CanvasMaskManager()",
-    "longname": "module:PIXI.CanvasMaskManager",
+    "id": "PIXI.CanvasMaskManager()",
+    "longname": "PIXI.CanvasMaskManager",
     "name": "CanvasMaskManager",
     "kind": "constructor",
     "description": "A set of functions used to handle masking.",
-    "memberof": "module:PIXI.CanvasMaskManager",
+    "memberof": "PIXI.CanvasMaskManager",
     "order": 1017
   },
   {
-    "id": "module:PIXI.CanvasTinter()",
-    "longname": "module:PIXI.CanvasTinter",
+    "id": "PIXI.CanvasTinter()",
+    "longname": "PIXI.CanvasTinter",
     "name": "CanvasTinter",
     "kind": "constructor",
     "description": "Utility methods for Sprite/Texture tinting.",
-    "memberof": "module:PIXI.CanvasTinter",
+    "memberof": "PIXI.CanvasTinter",
     "order": 1021
   },
   {
-    "id": "module:PIXI.CanvasRenderer()",
-    "longname": "module:PIXI.CanvasRenderer",
+    "id": "PIXI.CanvasRenderer()",
+    "longname": "PIXI.CanvasRenderer",
     "name": "CanvasRenderer",
     "kind": "constructor",
     "description": "The CanvasRenderer draws the Stage and all its content onto a 2d canvas. This renderer should be used for browsers that do not support webGL.\nDon't forget to add the CanvasRenderer.view to your DOM or you will not see anything :)",
-    "memberof": "module:PIXI.CanvasRenderer",
+    "memberof": "PIXI.CanvasRenderer",
     "params": [
       {
         "type": {
@@ -2734,21 +2734,21 @@
     "order": 1030
   },
   {
-    "id": "module:PIXI.CanvasGraphics()",
-    "longname": "module:PIXI.CanvasGraphics",
+    "id": "PIXI.CanvasGraphics()",
+    "longname": "PIXI.CanvasGraphics",
     "name": "CanvasGraphics",
     "kind": "constructor",
     "description": "A set of functions used by the canvas renderer to draw the primitive graphics data.",
-    "memberof": "module:PIXI.CanvasGraphics",
+    "memberof": "PIXI.CanvasGraphics",
     "order": 1051
   },
   {
-    "id": "module:PIXI.BaseTexture()",
-    "longname": "module:PIXI.BaseTexture",
+    "id": "PIXI.BaseTexture()",
+    "longname": "PIXI.BaseTexture",
     "name": "BaseTexture",
     "kind": "constructor",
     "description": "A texture stores the information that represents an image. All textures have a base texture.",
-    "memberof": "module:PIXI.BaseTexture",
+    "memberof": "PIXI.BaseTexture",
     "params": [
       {
         "type": {
@@ -2772,12 +2772,12 @@
     "order": 1054
   },
   {
-    "id": "module:PIXI.Texture()",
-    "longname": "module:PIXI.Texture",
+    "id": "PIXI.Texture()",
+    "longname": "PIXI.Texture",
     "name": "Texture",
     "kind": "constructor",
     "description": "A texture stores the information that represents an image or part of an image. It cannot be added\nto the display list directly. Instead use it as the texture for a PIXI.Sprite. If no frame is provided then the whole image is used.",
-    "memberof": "module:PIXI.Texture",
+    "memberof": "PIXI.Texture",
     "params": [
       {
         "type": {
@@ -2821,12 +2821,12 @@
     "order": 1077
   },
   {
-    "id": "module:PIXI.RenderTexture()",
-    "longname": "module:PIXI.RenderTexture",
+    "id": "PIXI.RenderTexture()",
+    "longname": "PIXI.RenderTexture",
     "name": "RenderTexture",
     "kind": "constructor",
     "description": "A RenderTexture is a special texture that allows any Pixi display object to be rendered to it.\n\n__Hint__: All DisplayObjects (i.e. Sprites) that render to a RenderTexture should be preloaded otherwise black rectangles will be drawn instead.\n\nA RenderTexture takes a snapshot of any Display Object given to its render method. The position and rotation of the given Display Objects is ignored. For example:\n\n   var renderTexture = new PIXI.RenderTexture(800, 600);\n   var sprite = PIXI.Sprite.fromImage(\"spinObj_01.png\");\n   sprite.position.x = 800/2;\n   sprite.position.y = 600/2;\n   sprite.anchor.x = 0.5;\n   sprite.anchor.y = 0.5;\n   renderTexture.render(sprite);\n\nThe Sprite in this case will be rendered to a position of 0,0. To render this sprite at its actual position a DisplayObjectContainer should be used:\n\n   var doc = new PIXI.DisplayObjectContainer();\n   doc.addChild(sprite);\n   renderTexture.render(doc);  // Renders to center of renderTexture",
-    "memberof": "module:PIXI.RenderTexture",
+    "memberof": "PIXI.RenderTexture",
     "params": [
       {
         "type": {
@@ -2878,12 +2878,12 @@
     "order": 1100
   },
   {
-    "id": "module:PIXI.AbstractFilter()",
-    "longname": "module:PIXI.AbstractFilter",
+    "id": "PIXI.AbstractFilter()",
+    "longname": "PIXI.AbstractFilter",
     "name": "AbstractFilter",
     "kind": "constructor",
     "description": "This is the base class for creating a PIXI filter. Currently only webGL supports filters.\nIf you want to make a custom filter this should be your base class.",
-    "memberof": "module:PIXI.AbstractFilter",
+    "memberof": "PIXI.AbstractFilter",
     "params": [
       {
         "type": {
@@ -2907,11 +2907,11 @@
     "order": 1117
   },
   {
-    "id": "module:PIXI.Strip()",
-    "longname": "module:PIXI.Strip",
+    "id": "PIXI.Strip()",
+    "longname": "PIXI.Strip",
     "name": "Strip",
     "kind": "constructor",
-    "memberof": "module:PIXI.Strip",
+    "memberof": "PIXI.Strip",
     "params": [
       {
         "type": {
@@ -2944,11 +2944,11 @@
     "order": 1126
   },
   {
-    "id": "module:PIXI.Rope()",
-    "longname": "module:PIXI.Rope",
+    "id": "PIXI.Rope()",
+    "longname": "PIXI.Rope",
     "name": "Rope",
     "kind": "constructor",
-    "memberof": "module:PIXI.Rope",
+    "memberof": "PIXI.Rope",
     "params": [
       {
         "type": {
@@ -2972,12 +2972,12 @@
     "order": 1136
   },
   {
-    "id": "module:PIXI.TilingSprite()",
-    "longname": "module:PIXI.TilingSprite",
+    "id": "PIXI.TilingSprite()",
+    "longname": "PIXI.TilingSprite",
     "name": "TilingSprite",
     "kind": "constructor",
     "description": "A tiling sprite is a fast way of rendering a tiling image",
-    "memberof": "module:PIXI.TilingSprite",
+    "memberof": "PIXI.TilingSprite",
     "params": [
       {
         "type": {
@@ -5100,12 +5100,12 @@
     "order": 2845
   },
   {
-    "id": "module:PIXI.Graphics()",
-    "longname": "module:PIXI.Graphics",
+    "id": "PIXI.Graphics()",
+    "longname": "PIXI.Graphics",
     "name": "Graphics",
     "kind": "constructor",
     "description": "The Graphics class contains methods used to draw primitive shapes such as lines, circles and rectangles to the display, and color and fill them.",
-    "memberof": "module:PIXI.Graphics",
+    "memberof": "PIXI.Graphics",
     "order": 2939
   },
   {
@@ -21501,7 +21501,7 @@
     "memberof": "PIXI.DisplayObjectContainer",
     "type": {
       "names": [
-        "Array(DisplayObject)"
+        "Array.DisplayObject"
       ]
     },
     "readonly": true,
@@ -29700,7 +29700,7 @@
       {
         "type": {
           "names": [
-            "Bounds-like"
+            "Bounds"
           ]
         },
         "name": "margin"
@@ -38683,13 +38683,13 @@
     "order": 2861
   },
   {
-    "id": "module:PIXI.PIXI.Graphics#fillAlpha",
-    "longname": "module:PIXI.PIXI.Graphics#fillAlpha",
+    "id": "PIXI.PIXI.Graphics#fillAlpha",
+    "longname": "PIXI.PIXI.Graphics#fillAlpha",
     "name": "fillAlpha",
     "scope": "instance",
     "kind": "member",
     "description": "The alpha value used when filling the Graphics object.",
-    "memberof": "module:PIXI.PIXI.Graphics",
+    "memberof": "PIXI.PIXI.Graphics",
     "type": {
       "names": [
         "Number"
@@ -38703,13 +38703,13 @@
     "order": 2940
   },
   {
-    "id": "module:PIXI.PIXI.Graphics#lineWidth",
-    "longname": "module:PIXI.PIXI.Graphics#lineWidth",
+    "id": "PIXI.PIXI.Graphics#lineWidth",
+    "longname": "PIXI.PIXI.Graphics#lineWidth",
     "name": "lineWidth",
     "scope": "instance",
     "kind": "member",
     "description": "The width (thickness) of any lines drawn.",
-    "memberof": "module:PIXI.PIXI.Graphics",
+    "memberof": "PIXI.PIXI.Graphics",
     "type": {
       "names": [
         "Number"
@@ -38723,13 +38723,13 @@
     "order": 2941
   },
   {
-    "id": "module:PIXI.PIXI.Graphics#lineColor",
-    "longname": "module:PIXI.PIXI.Graphics#lineColor",
+    "id": "PIXI.PIXI.Graphics#lineColor",
+    "longname": "PIXI.PIXI.Graphics#lineColor",
     "name": "lineColor",
     "scope": "instance",
     "kind": "member",
     "description": "The color of any lines drawn.",
-    "memberof": "module:PIXI.PIXI.Graphics",
+    "memberof": "PIXI.PIXI.Graphics",
     "type": {
       "names": [
         "String"
@@ -38744,13 +38744,13 @@
     "order": 2942
   },
   {
-    "id": "module:PIXI.PIXI.Graphics#tint",
-    "longname": "module:PIXI.PIXI.Graphics#tint",
+    "id": "PIXI.PIXI.Graphics#tint",
+    "longname": "PIXI.PIXI.Graphics#tint",
     "name": "tint",
     "scope": "instance",
     "kind": "member",
     "description": "The tint applied to the graphic shape. This is a hex value. Apply a value of 0xFFFFFF to reset the tint.",
-    "memberof": "module:PIXI.PIXI.Graphics",
+    "memberof": "PIXI.PIXI.Graphics",
     "type": {
       "names": [
         "Number"
@@ -38765,13 +38765,13 @@
     "order": 2944
   },
   {
-    "id": "module:PIXI.PIXI.Graphics#blendMode",
-    "longname": "module:PIXI.PIXI.Graphics#blendMode",
+    "id": "PIXI.PIXI.Graphics#blendMode",
+    "longname": "PIXI.PIXI.Graphics#blendMode",
     "name": "blendMode",
     "scope": "instance",
     "kind": "member",
     "description": "The blend mode to be applied to the graphic shape. Apply a value of PIXI.blendModes.NORMAL to reset the blend mode.",
-    "memberof": "module:PIXI.PIXI.Graphics",
+    "memberof": "PIXI.PIXI.Graphics",
     "type": {
       "names": [
         "Number"
@@ -38786,13 +38786,13 @@
     "order": 2945
   },
   {
-    "id": "module:PIXI.PIXI.Graphics#isMask",
-    "longname": "module:PIXI.PIXI.Graphics#isMask",
+    "id": "PIXI.PIXI.Graphics#isMask",
+    "longname": "PIXI.PIXI.Graphics#isMask",
     "name": "isMask",
     "scope": "instance",
     "kind": "member",
     "description": "Whether this shape is being used as a mask.",
-    "memberof": "module:PIXI.PIXI.Graphics",
+    "memberof": "PIXI.PIXI.Graphics",
     "type": {
       "names": [
         "Boolean"
@@ -38806,13 +38806,13 @@
     "order": 2948
   },
   {
-    "id": "module:PIXI.PIXI.Graphics#boundsPadding",
-    "longname": "module:PIXI.PIXI.Graphics#boundsPadding",
+    "id": "PIXI.PIXI.Graphics#boundsPadding",
+    "longname": "PIXI.PIXI.Graphics#boundsPadding",
     "name": "boundsPadding",
     "scope": "instance",
     "kind": "member",
     "description": "The bounds' padding used for bounds calculation.",
-    "memberof": "module:PIXI.PIXI.Graphics",
+    "memberof": "PIXI.PIXI.Graphics",
     "type": {
       "names": [
         "Number"
@@ -48727,12 +48727,12 @@
     "order": 4413
   },
   {
-    "id": "module:PIXI.p2.Body#parent",
-    "longname": "module:PIXI.p2.Body#parent",
+    "id": "PIXI.p2.Body#parent",
+    "longname": "PIXI.p2.Body#parent",
     "name": "parent",
     "scope": "instance",
     "kind": "member",
-    "memberof": "module:PIXI.p2.Body",
+    "memberof": "PIXI.p2.Body",
     "copyright": "2015 Photon Storm Ltd.",
     "author": [
       "Richard Davey <rich@photonstorm.com>"
@@ -74738,13 +74738,13 @@
     "order": 2936
   },
   {
-    "id": "module:PIXI.PIXI.Graphics#containsPoint",
-    "longname": "module:PIXI.PIXI.Graphics#containsPoint",
+    "id": "PIXI.PIXI.Graphics#containsPoint",
+    "longname": "PIXI.PIXI.Graphics#containsPoint",
     "name": "containsPoint",
     "scope": "instance",
     "kind": "function",
     "description": "Tests if a point is inside this graphics object",
-    "memberof": "module:PIXI.PIXI.Graphics",
+    "memberof": "PIXI.PIXI.Graphics",
     "params": [
       {
         "type": {
@@ -74769,13 +74769,13 @@
     "order": 2971
   },
   {
-    "id": "module:PIXI.PIXI.GraphicsData#clone",
-    "longname": "module:PIXI.PIXI.GraphicsData#clone",
+    "id": "PIXI.PIXI.GraphicsData#clone",
+    "longname": "PIXI.PIXI.GraphicsData#clone",
     "name": "clone",
     "scope": "instance",
     "kind": "function",
     "description": "Creates a new GraphicsData object with the same values as this one.",
-    "memberof": "module:PIXI.PIXI.GraphicsData",
+    "memberof": "PIXI.PIXI.GraphicsData",
     "returns": [
       {
         "type": {
@@ -113761,30 +113761,30 @@
     "order": 5392
   },
   {
-    "id": "module:PIXI.PIXI",
-    "longname": "module:PIXI.PIXI",
+    "id": "PIXI.PIXI",
+    "longname": "PIXI.PIXI",
     "name": "PIXI",
     "scope": "static",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 704
   },
   {
-    "id": "module:PIXI.CanvasTinter",
-    "longname": "module:PIXI.CanvasTinter",
+    "id": "PIXI.CanvasTinter",
+    "longname": "PIXI.CanvasTinter",
     "name": "CanvasTinter",
     "scope": "static",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1020
   },
   {
-    "id": "module:PIXI.CanvasGraphics",
-    "longname": "module:PIXI.CanvasGraphics",
+    "id": "PIXI.CanvasGraphics",
+    "longname": "PIXI.CanvasGraphics",
     "name": "CanvasGraphics",
     "scope": "static",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1050
   },
   {
@@ -116516,13 +116516,13 @@
     "order": 4629
   },
   {
-    "id": "module:PIXI.blendModes",
-    "longname": "module:PIXI.blendModes",
+    "id": "PIXI.blendModes",
+    "longname": "PIXI.blendModes",
     "name": "blendModes",
     "scope": "static",
     "kind": "constant",
     "description": "Various blend modes supported by Pixi.\n\nIMPORTANT: The WebGL renderer only supports the NORMAL, ADD, MULTIPLY and SCREEN blend modes.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "properties": [
       {
         "type": {
@@ -116664,13 +116664,13 @@
     "order": 1198
   },
   {
-    "id": "module:PIXI.scaleModes",
-    "longname": "module:PIXI.scaleModes",
+    "id": "PIXI.scaleModes",
+    "longname": "PIXI.scaleModes",
     "name": "scaleModes",
     "scope": "static",
     "kind": "constant",
     "description": "The scale modes that are supported by Pixi.\n\nThe DEFAULT scale mode affects the default scaling mode of future operations.\nIt can be re-assigned to either LINEAR or NEAREST, depending upon suitability.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "properties": [
       {
         "type": {
@@ -119954,13 +119954,13 @@
     "order": 631
   },
   {
-    "id": "module:PIXI.fromFrame",
-    "longname": "module:PIXI.fromFrame",
+    "id": "PIXI.fromFrame",
+    "longname": "PIXI.fromFrame",
     "name": "fromFrame",
     "scope": "static",
     "kind": "function",
     "description": "Helper function that creates a sprite that will contain a texture from the TextureCache based on the frameId\nThe frame ids are created when a Texture packer file has been loaded",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -119985,13 +119985,13 @@
     "order": 789
   },
   {
-    "id": "module:PIXI.fromImage",
-    "longname": "module:PIXI.fromImage",
+    "id": "PIXI.fromImage",
+    "longname": "PIXI.fromImage",
     "name": "fromImage",
     "scope": "static",
     "kind": "function",
     "description": "Helper function that creates a sprite that will contain a texture based on an image url\nIf the image is not in the texture cache it will be loaded",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120016,12 +120016,12 @@
     "order": 790
   },
   {
-    "id": "module:PIXI.CompileVertexShader",
-    "longname": "module:PIXI.CompileVertexShader",
+    "id": "PIXI.CompileVertexShader",
+    "longname": "PIXI.CompileVertexShader",
     "name": "CompileVertexShader",
     "scope": "static",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120053,12 +120053,12 @@
     "order": 810
   },
   {
-    "id": "module:PIXI.CompileFragmentShader",
-    "longname": "module:PIXI.CompileFragmentShader",
+    "id": "PIXI.CompileFragmentShader",
+    "longname": "PIXI.CompileFragmentShader",
     "name": "CompileFragmentShader",
     "scope": "static",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120090,12 +120090,12 @@
     "order": 811
   },
   {
-    "id": "module:PIXI.compileProgram",
-    "longname": "module:PIXI.compileProgram",
+    "id": "PIXI.compileProgram",
+    "longname": "PIXI.compileProgram",
     "name": "compileProgram",
     "scope": "static",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120135,13 +120135,13 @@
     "order": 813
   },
   {
-    "id": "module:PIXI.getTintedTexture",
-    "longname": "module:PIXI.getTintedTexture",
+    "id": "PIXI.getTintedTexture",
+    "longname": "PIXI.getTintedTexture",
     "name": "getTintedTexture",
     "scope": "static",
     "kind": "function",
     "description": "Basically this method just needs a sprite and a color and tints the sprite with the given color.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120253,33 +120253,33 @@
     "order": 1024
   },
   {
-    "id": "module:PIXI.checkInverseAlpha",
-    "longname": "module:PIXI.checkInverseAlpha",
+    "id": "PIXI.checkInverseAlpha",
+    "longname": "PIXI.checkInverseAlpha",
     "name": "checkInverseAlpha",
     "scope": "static",
     "kind": "function",
     "description": "Checks if the browser correctly supports putImageData alpha channels.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1025
   },
   {
-    "id": "module:PIXI.tintMethod",
-    "longname": "module:PIXI.tintMethod",
+    "id": "PIXI.tintMethod",
+    "longname": "PIXI.tintMethod",
     "name": "tintMethod",
     "scope": "static",
     "kind": "function",
     "description": "The tinting method that will be used.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1028
   },
   {
-    "id": "module:PIXI.fromImage",
-    "longname": "module:PIXI.fromImage",
+    "id": "PIXI.fromImage",
+    "longname": "PIXI.fromImage",
     "name": "fromImage",
     "scope": "static",
     "kind": "function",
     "description": "Helper function that creates a base texture from the given image url.\nIf the image is not in the base texture cache it will be created and loaded.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120316,13 +120316,13 @@
     "order": 1072
   },
   {
-    "id": "module:PIXI.fromCanvas",
-    "longname": "module:PIXI.fromCanvas",
+    "id": "PIXI.fromCanvas",
+    "longname": "PIXI.fromCanvas",
     "name": "fromCanvas",
     "scope": "static",
     "kind": "function",
     "description": "Helper function that creates a base texture from the given canvas element.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120351,13 +120351,13 @@
     "order": 1073
   },
   {
-    "id": "module:PIXI.fromImage",
-    "longname": "module:PIXI.fromImage",
+    "id": "PIXI.fromImage",
+    "longname": "PIXI.fromImage",
     "name": "fromImage",
     "scope": "static",
     "kind": "function",
     "description": "Helper function that creates a Texture object from the given image url.\nIf the image is not in the texture cache it will be  created and loaded.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120395,13 +120395,13 @@
     "order": 1094
   },
   {
-    "id": "module:PIXI.fromFrame",
-    "longname": "module:PIXI.fromFrame",
+    "id": "PIXI.fromFrame",
+    "longname": "PIXI.fromFrame",
     "name": "fromFrame",
     "scope": "static",
     "kind": "function",
     "description": "Helper function that returns a Texture objected based on the given frame id.\nIf the frame id is not in the texture cache an error will be thrown.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120421,13 +120421,13 @@
     "order": 1095
   },
   {
-    "id": "module:PIXI.fromCanvas",
-    "longname": "module:PIXI.fromCanvas",
+    "id": "PIXI.fromCanvas",
+    "longname": "PIXI.fromCanvas",
     "name": "fromCanvas",
     "scope": "static",
     "kind": "function",
     "description": "Helper function that creates a new a Texture based on the given canvas element.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120456,13 +120456,13 @@
     "order": 1096
   },
   {
-    "id": "module:PIXI.addTextureToCache",
-    "longname": "module:PIXI.addTextureToCache",
+    "id": "PIXI.addTextureToCache",
+    "longname": "PIXI.addTextureToCache",
     "name": "addTextureToCache",
     "scope": "static",
     "kind": "function",
     "description": "Adds a texture to the global PIXI.TextureCache. This cache is shared across the whole PIXI object.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -120486,13 +120486,13 @@
     "order": 1097
   },
   {
-    "id": "module:PIXI.removeTextureFromCache",
-    "longname": "module:PIXI.removeTextureFromCache",
+    "id": "PIXI.removeTextureFromCache",
+    "longname": "PIXI.removeTextureFromCache",
     "name": "removeTextureFromCache",
     "scope": "static",
     "kind": "function",
     "description": "Remove a texture from the global PIXI.TextureCache.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -122667,7 +122667,7 @@
       {
         "type": {
           "names": [
-            "Rectangle-like"
+            "Rectangle"
           ]
         },
         "description": "The first Rectangle object.",
@@ -122676,7 +122676,7 @@
       {
         "type": {
           "names": [
-            "Rectangle-like"
+            "Rectangle"
           ]
         },
         "description": "The second Rectangle object.",
@@ -127469,192 +127469,192 @@
     "order": 595
   },
   {
-    "id": "module:PIXI.DisplayObject",
-    "longname": "module:PIXI.DisplayObject",
+    "id": "PIXI.DisplayObject",
+    "longname": "PIXI.DisplayObject",
     "name": "DisplayObject",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 714
   },
   {
-    "id": "module:PIXI.DisplayObjectContainer",
-    "longname": "module:PIXI.DisplayObjectContainer",
+    "id": "PIXI.DisplayObjectContainer",
+    "longname": "PIXI.DisplayObjectContainer",
     "name": "DisplayObjectContainer",
     "scope": "inner",
     "kind": "class",
     "augments": [
       "DisplayObject"
     ],
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 755
   },
   {
-    "id": "module:PIXI.Sprite",
-    "longname": "module:PIXI.Sprite",
+    "id": "PIXI.Sprite",
+    "longname": "PIXI.Sprite",
     "name": "Sprite",
     "scope": "inner",
     "kind": "class",
     "augments": [
       "DisplayObjectContainer"
     ],
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 773
   },
   {
-    "id": "module:PIXI.SpriteBatch",
-    "longname": "module:PIXI.SpriteBatch",
+    "id": "PIXI.SpriteBatch",
+    "longname": "PIXI.SpriteBatch",
     "name": "SpriteBatch",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 791
   },
   {
-    "id": "module:PIXI.Stage",
-    "longname": "module:PIXI.Stage",
+    "id": "PIXI.Stage",
+    "longname": "PIXI.Stage",
     "name": "Stage",
     "scope": "inner",
     "kind": "class",
     "augments": [
       "DisplayObjectContainer"
     ],
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 795
   },
   {
-    "id": "module:PIXI.PolyK",
-    "longname": "module:PIXI.PolyK",
+    "id": "PIXI.PolyK",
+    "longname": "PIXI.PolyK",
     "name": "PolyK",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 804
   },
   {
-    "id": "module:PIXI.PixiShader",
-    "longname": "module:PIXI.PixiShader",
+    "id": "PIXI.PixiShader",
+    "longname": "PIXI.PixiShader",
     "name": "PixiShader",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 814
   },
   {
-    "id": "module:PIXI.PixiFastShader",
-    "longname": "module:PIXI.PixiFastShader",
+    "id": "PIXI.PixiFastShader",
+    "longname": "PIXI.PixiFastShader",
     "name": "PixiFastShader",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 830
   },
   {
-    "id": "module:PIXI.StripShader",
-    "longname": "module:PIXI.StripShader",
+    "id": "PIXI.StripShader",
+    "longname": "PIXI.StripShader",
     "name": "StripShader",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 840
   },
   {
-    "id": "module:PIXI.PrimitiveShader",
-    "longname": "module:PIXI.PrimitiveShader",
+    "id": "PIXI.PrimitiveShader",
+    "longname": "PIXI.PrimitiveShader",
     "name": "PrimitiveShader",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 849
   },
   {
-    "id": "module:PIXI.ComplexPrimitiveShader",
-    "longname": "module:PIXI.ComplexPrimitiveShader",
+    "id": "PIXI.ComplexPrimitiveShader",
+    "longname": "PIXI.ComplexPrimitiveShader",
     "name": "ComplexPrimitiveShader",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 858
   },
   {
-    "id": "module:PIXI.WebGLRenderer",
-    "longname": "module:PIXI.WebGLRenderer",
+    "id": "PIXI.WebGLRenderer",
+    "longname": "PIXI.WebGLRenderer",
     "name": "WebGLRenderer",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 883
   },
   {
-    "id": "module:PIXI.WebGLBlendModeManager",
-    "longname": "module:PIXI.WebGLBlendModeManager",
+    "id": "PIXI.WebGLBlendModeManager",
+    "longname": "PIXI.WebGLBlendModeManager",
     "name": "WebGLBlendModeManager",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 911
   },
   {
-    "id": "module:PIXI.WebGLFastSpriteBatch",
-    "longname": "module:PIXI.WebGLFastSpriteBatch",
+    "id": "PIXI.WebGLFastSpriteBatch",
+    "longname": "PIXI.WebGLFastSpriteBatch",
     "name": "WebGLFastSpriteBatch",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 964
   },
   {
-    "id": "module:PIXI.WebGLFilterManager",
-    "longname": "module:PIXI.WebGLFilterManager",
+    "id": "PIXI.WebGLFilterManager",
+    "longname": "PIXI.WebGLFilterManager",
     "name": "WebGLFilterManager",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 988
   },
   {
-    "id": "module:PIXI.FilterTexture",
-    "longname": "module:PIXI.FilterTexture",
+    "id": "PIXI.FilterTexture",
+    "longname": "PIXI.FilterTexture",
     "name": "FilterTexture",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 999
   },
   {
-    "id": "module:PIXI.CanvasBuffer",
-    "longname": "module:PIXI.CanvasBuffer",
+    "id": "PIXI.CanvasBuffer",
+    "longname": "PIXI.CanvasBuffer",
     "name": "CanvasBuffer",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1008
   },
   {
-    "id": "module:PIXI.CanvasMaskManager",
-    "longname": "module:PIXI.CanvasMaskManager",
+    "id": "PIXI.CanvasMaskManager",
+    "longname": "PIXI.CanvasMaskManager",
     "name": "CanvasMaskManager",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1016
   },
   {
-    "id": "module:PIXI.CanvasRenderer",
-    "longname": "module:PIXI.CanvasRenderer",
+    "id": "PIXI.CanvasRenderer",
+    "longname": "PIXI.CanvasRenderer",
     "name": "CanvasRenderer",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1029
   },
   {
-    "id": "module:PIXI.BaseTexture",
-    "longname": "module:PIXI.BaseTexture",
+    "id": "PIXI.BaseTexture",
+    "longname": "PIXI.BaseTexture",
     "name": "BaseTexture",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "customTags": [
       {
         "tag": "uses",
@@ -127664,12 +127664,12 @@
     "order": 1053
   },
   {
-    "id": "module:PIXI.Texture",
-    "longname": "module:PIXI.Texture",
+    "id": "PIXI.Texture",
+    "longname": "PIXI.Texture",
     "name": "Texture",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "customTags": [
       {
         "tag": "uses",
@@ -127679,72 +127679,72 @@
     "order": 1076
   },
   {
-    "id": "module:PIXI.RenderTexture",
-    "longname": "module:PIXI.RenderTexture",
+    "id": "PIXI.RenderTexture",
+    "longname": "PIXI.RenderTexture",
     "name": "RenderTexture",
     "scope": "inner",
     "kind": "class",
     "augments": [
       "Texture"
     ],
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1099
   },
   {
-    "id": "module:PIXI.AbstractFilter",
-    "longname": "module:PIXI.AbstractFilter",
+    "id": "PIXI.AbstractFilter",
+    "longname": "PIXI.AbstractFilter",
     "name": "AbstractFilter",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1116
   },
   {
-    "id": "module:PIXI.Strip",
-    "longname": "module:PIXI.Strip",
+    "id": "PIXI.Strip",
+    "longname": "PIXI.Strip",
     "name": "Strip",
     "scope": "inner",
     "kind": "class",
     "augments": [
       "DisplayObjectContainer"
     ],
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1125
   },
   {
-    "id": "module:PIXI.Rope",
-    "longname": "module:PIXI.Rope",
+    "id": "PIXI.Rope",
+    "longname": "PIXI.Rope",
     "name": "Rope",
     "scope": "inner",
     "kind": "class",
     "augments": [
       "Strip"
     ],
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1135
   },
   {
-    "id": "module:PIXI.TilingSprite",
-    "longname": "module:PIXI.TilingSprite",
+    "id": "PIXI.TilingSprite",
+    "longname": "PIXI.TilingSprite",
     "name": "TilingSprite",
     "scope": "inner",
     "kind": "class",
     "augments": [
       "Sprite"
     ],
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1137
   },
   {
-    "id": "module:PIXI.Graphics",
-    "longname": "module:PIXI.Graphics",
+    "id": "PIXI.Graphics",
+    "longname": "PIXI.Graphics",
     "name": "Graphics",
     "scope": "inner",
     "kind": "class",
     "augments": [
       "DisplayObjectContainer"
     ],
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 2938
   },
   {
@@ -127788,12 +127788,12 @@
     "order": 460
   },
   {
-    "id": "module:PIXI.scaleMode",
-    "longname": "module:PIXI.scaleMode",
+    "id": "PIXI.scaleMode",
+    "longname": "PIXI.scaleMode",
     "name": "scaleMode",
     "scope": "inner",
     "kind": "member",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "Number"
@@ -127807,22 +127807,22 @@
     "order": 1004
   },
   {
-    "id": "module:PIXI.Phaser",
-    "longname": "module:PIXI.Phaser",
+    "id": "PIXI.Phaser",
+    "longname": "PIXI.Phaser",
     "name": "Phaser",
     "scope": "inner",
     "kind": "namespace",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1157
   },
   {
-    "id": "module:PIXI.VERSION",
-    "longname": "module:PIXI.VERSION",
+    "id": "PIXI.VERSION",
+    "longname": "PIXI.VERSION",
     "name": "VERSION",
     "scope": "inner",
     "kind": "constant",
     "description": "The Phaser version number.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "string"
@@ -127831,13 +127831,13 @@
     "order": 1158
   },
   {
-    "id": "module:PIXI.GAMES",
-    "longname": "module:PIXI.GAMES",
+    "id": "PIXI.GAMES",
+    "longname": "PIXI.GAMES",
     "name": "GAMES",
     "scope": "inner",
     "kind": "constant",
     "description": "An array of Phaser game instances.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "array"
@@ -127846,13 +127846,13 @@
     "order": 1159
   },
   {
-    "id": "module:PIXI.AUTO",
-    "longname": "module:PIXI.AUTO",
+    "id": "PIXI.AUTO",
+    "longname": "PIXI.AUTO",
     "name": "AUTO",
     "scope": "inner",
     "kind": "constant",
     "description": "AUTO renderer - picks between WebGL or Canvas based on device.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -127861,13 +127861,13 @@
     "order": 1160
   },
   {
-    "id": "module:PIXI.CANVAS",
-    "longname": "module:PIXI.CANVAS",
+    "id": "PIXI.CANVAS",
+    "longname": "PIXI.CANVAS",
     "name": "CANVAS",
     "scope": "inner",
     "kind": "constant",
     "description": "Canvas Renderer.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -127876,13 +127876,13 @@
     "order": 1161
   },
   {
-    "id": "module:PIXI.WEBGL",
-    "longname": "module:PIXI.WEBGL",
+    "id": "PIXI.WEBGL",
+    "longname": "PIXI.WEBGL",
     "name": "WEBGL",
     "scope": "inner",
     "kind": "constant",
     "description": "WebGL Renderer.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -127891,13 +127891,13 @@
     "order": 1162
   },
   {
-    "id": "module:PIXI.HEADLESS",
-    "longname": "module:PIXI.HEADLESS",
+    "id": "PIXI.HEADLESS",
+    "longname": "PIXI.HEADLESS",
     "name": "HEADLESS",
     "scope": "inner",
     "kind": "constant",
     "description": "Headless renderer (not visual output)",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -127906,13 +127906,13 @@
     "order": 1163
   },
   {
-    "id": "module:PIXI.NONE",
-    "longname": "module:PIXI.NONE",
+    "id": "PIXI.NONE",
+    "longname": "PIXI.NONE",
     "name": "NONE",
     "scope": "inner",
     "kind": "constant",
     "description": "Direction constant.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -127921,13 +127921,13 @@
     "order": 1164
   },
   {
-    "id": "module:PIXI.LEFT",
-    "longname": "module:PIXI.LEFT",
+    "id": "PIXI.LEFT",
+    "longname": "PIXI.LEFT",
     "name": "LEFT",
     "scope": "inner",
     "kind": "constant",
     "description": "Direction constant.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -127936,13 +127936,13 @@
     "order": 1165
   },
   {
-    "id": "module:PIXI.RIGHT",
-    "longname": "module:PIXI.RIGHT",
+    "id": "PIXI.RIGHT",
+    "longname": "PIXI.RIGHT",
     "name": "RIGHT",
     "scope": "inner",
     "kind": "constant",
     "description": "Direction constant.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -127951,13 +127951,13 @@
     "order": 1166
   },
   {
-    "id": "module:PIXI.UP",
-    "longname": "module:PIXI.UP",
+    "id": "PIXI.UP",
+    "longname": "PIXI.UP",
     "name": "UP",
     "scope": "inner",
     "kind": "constant",
     "description": "Direction constant.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -127966,13 +127966,13 @@
     "order": 1167
   },
   {
-    "id": "module:PIXI.DOWN",
-    "longname": "module:PIXI.DOWN",
+    "id": "PIXI.DOWN",
+    "longname": "PIXI.DOWN",
     "name": "DOWN",
     "scope": "inner",
     "kind": "constant",
     "description": "Direction constant.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -127981,13 +127981,13 @@
     "order": 1168
   },
   {
-    "id": "module:PIXI.SPRITE",
-    "longname": "module:PIXI.SPRITE",
+    "id": "PIXI.SPRITE",
+    "longname": "PIXI.SPRITE",
     "name": "SPRITE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -127996,13 +127996,13 @@
     "order": 1169
   },
   {
-    "id": "module:PIXI.BUTTON",
-    "longname": "module:PIXI.BUTTON",
+    "id": "PIXI.BUTTON",
+    "longname": "PIXI.BUTTON",
     "name": "BUTTON",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128011,13 +128011,13 @@
     "order": 1170
   },
   {
-    "id": "module:PIXI.IMAGE",
-    "longname": "module:PIXI.IMAGE",
+    "id": "PIXI.IMAGE",
+    "longname": "PIXI.IMAGE",
     "name": "IMAGE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128026,13 +128026,13 @@
     "order": 1171
   },
   {
-    "id": "module:PIXI.GRAPHICS",
-    "longname": "module:PIXI.GRAPHICS",
+    "id": "PIXI.GRAPHICS",
+    "longname": "PIXI.GRAPHICS",
     "name": "GRAPHICS",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128041,13 +128041,13 @@
     "order": 1172
   },
   {
-    "id": "module:PIXI.TEXT",
-    "longname": "module:PIXI.TEXT",
+    "id": "PIXI.TEXT",
+    "longname": "PIXI.TEXT",
     "name": "TEXT",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128056,13 +128056,13 @@
     "order": 1173
   },
   {
-    "id": "module:PIXI.TILESPRITE",
-    "longname": "module:PIXI.TILESPRITE",
+    "id": "PIXI.TILESPRITE",
+    "longname": "PIXI.TILESPRITE",
     "name": "TILESPRITE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128071,13 +128071,13 @@
     "order": 1174
   },
   {
-    "id": "module:PIXI.BITMAPTEXT",
-    "longname": "module:PIXI.BITMAPTEXT",
+    "id": "PIXI.BITMAPTEXT",
+    "longname": "PIXI.BITMAPTEXT",
     "name": "BITMAPTEXT",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128086,13 +128086,13 @@
     "order": 1175
   },
   {
-    "id": "module:PIXI.GROUP",
-    "longname": "module:PIXI.GROUP",
+    "id": "PIXI.GROUP",
+    "longname": "PIXI.GROUP",
     "name": "GROUP",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128101,13 +128101,13 @@
     "order": 1176
   },
   {
-    "id": "module:PIXI.RENDERTEXTURE",
-    "longname": "module:PIXI.RENDERTEXTURE",
+    "id": "PIXI.RENDERTEXTURE",
+    "longname": "PIXI.RENDERTEXTURE",
     "name": "RENDERTEXTURE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128116,13 +128116,13 @@
     "order": 1177
   },
   {
-    "id": "module:PIXI.TILEMAP",
-    "longname": "module:PIXI.TILEMAP",
+    "id": "PIXI.TILEMAP",
+    "longname": "PIXI.TILEMAP",
     "name": "TILEMAP",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128131,13 +128131,13 @@
     "order": 1178
   },
   {
-    "id": "module:PIXI.TILEMAPLAYER",
-    "longname": "module:PIXI.TILEMAPLAYER",
+    "id": "PIXI.TILEMAPLAYER",
+    "longname": "PIXI.TILEMAPLAYER",
     "name": "TILEMAPLAYER",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128146,13 +128146,13 @@
     "order": 1179
   },
   {
-    "id": "module:PIXI.EMITTER",
-    "longname": "module:PIXI.EMITTER",
+    "id": "PIXI.EMITTER",
+    "longname": "PIXI.EMITTER",
     "name": "EMITTER",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128161,13 +128161,13 @@
     "order": 1180
   },
   {
-    "id": "module:PIXI.POLYGON",
-    "longname": "module:PIXI.POLYGON",
+    "id": "PIXI.POLYGON",
+    "longname": "PIXI.POLYGON",
     "name": "POLYGON",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128176,13 +128176,13 @@
     "order": 1181
   },
   {
-    "id": "module:PIXI.BITMAPDATA",
-    "longname": "module:PIXI.BITMAPDATA",
+    "id": "PIXI.BITMAPDATA",
+    "longname": "PIXI.BITMAPDATA",
     "name": "BITMAPDATA",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128191,13 +128191,13 @@
     "order": 1182
   },
   {
-    "id": "module:PIXI.CANVAS_FILTER",
-    "longname": "module:PIXI.CANVAS_FILTER",
+    "id": "PIXI.CANVAS_FILTER",
+    "longname": "PIXI.CANVAS_FILTER",
     "name": "CANVAS_FILTER",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128206,13 +128206,13 @@
     "order": 1183
   },
   {
-    "id": "module:PIXI.WEBGL_FILTER",
-    "longname": "module:PIXI.WEBGL_FILTER",
+    "id": "PIXI.WEBGL_FILTER",
+    "longname": "PIXI.WEBGL_FILTER",
     "name": "WEBGL_FILTER",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128221,13 +128221,13 @@
     "order": 1184
   },
   {
-    "id": "module:PIXI.ELLIPSE",
-    "longname": "module:PIXI.ELLIPSE",
+    "id": "PIXI.ELLIPSE",
+    "longname": "PIXI.ELLIPSE",
     "name": "ELLIPSE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128236,13 +128236,13 @@
     "order": 1185
   },
   {
-    "id": "module:PIXI.SPRITEBATCH",
-    "longname": "module:PIXI.SPRITEBATCH",
+    "id": "PIXI.SPRITEBATCH",
+    "longname": "PIXI.SPRITEBATCH",
     "name": "SPRITEBATCH",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128251,13 +128251,13 @@
     "order": 1186
   },
   {
-    "id": "module:PIXI.RETROFONT",
-    "longname": "module:PIXI.RETROFONT",
+    "id": "PIXI.RETROFONT",
+    "longname": "PIXI.RETROFONT",
     "name": "RETROFONT",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128266,13 +128266,13 @@
     "order": 1187
   },
   {
-    "id": "module:PIXI.POINTER",
-    "longname": "module:PIXI.POINTER",
+    "id": "PIXI.POINTER",
+    "longname": "PIXI.POINTER",
     "name": "POINTER",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128281,13 +128281,13 @@
     "order": 1188
   },
   {
-    "id": "module:PIXI.ROPE",
-    "longname": "module:PIXI.ROPE",
+    "id": "PIXI.ROPE",
+    "longname": "PIXI.ROPE",
     "name": "ROPE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128296,13 +128296,13 @@
     "order": 1189
   },
   {
-    "id": "module:PIXI.CIRCLE",
-    "longname": "module:PIXI.CIRCLE",
+    "id": "PIXI.CIRCLE",
+    "longname": "PIXI.CIRCLE",
     "name": "CIRCLE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128311,13 +128311,13 @@
     "order": 1190
   },
   {
-    "id": "module:PIXI.RECTANGLE",
-    "longname": "module:PIXI.RECTANGLE",
+    "id": "PIXI.RECTANGLE",
+    "longname": "PIXI.RECTANGLE",
     "name": "RECTANGLE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128326,13 +128326,13 @@
     "order": 1191
   },
   {
-    "id": "module:PIXI.LINE",
-    "longname": "module:PIXI.LINE",
+    "id": "PIXI.LINE",
+    "longname": "PIXI.LINE",
     "name": "LINE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128341,13 +128341,13 @@
     "order": 1192
   },
   {
-    "id": "module:PIXI.MATRIX",
-    "longname": "module:PIXI.MATRIX",
+    "id": "PIXI.MATRIX",
+    "longname": "PIXI.MATRIX",
     "name": "MATRIX",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128356,13 +128356,13 @@
     "order": 1193
   },
   {
-    "id": "module:PIXI.POINT",
-    "longname": "module:PIXI.POINT",
+    "id": "PIXI.POINT",
+    "longname": "PIXI.POINT",
     "name": "POINT",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128371,13 +128371,13 @@
     "order": 1194
   },
   {
-    "id": "module:PIXI.ROUNDEDRECTANGLE",
-    "longname": "module:PIXI.ROUNDEDRECTANGLE",
+    "id": "PIXI.ROUNDEDRECTANGLE",
+    "longname": "PIXI.ROUNDEDRECTANGLE",
     "name": "ROUNDEDRECTANGLE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128386,13 +128386,13 @@
     "order": 1195
   },
   {
-    "id": "module:PIXI.CREATURE",
-    "longname": "module:PIXI.CREATURE",
+    "id": "PIXI.CREATURE",
+    "longname": "PIXI.CREATURE",
     "name": "CREATURE",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128401,13 +128401,13 @@
     "order": 1196
   },
   {
-    "id": "module:PIXI.VIDEO",
-    "longname": "module:PIXI.VIDEO",
+    "id": "PIXI.VIDEO",
+    "longname": "PIXI.VIDEO",
     "name": "VIDEO",
     "scope": "inner",
     "kind": "constant",
     "description": "Game Object type.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "integer"
@@ -128416,23 +128416,23 @@
     "order": 1197
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroy this DisplayObject.\nRemoves all references to transformCallbacks, its parent, the stage, filters, bounds, mask and cached Sprites.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 741
   },
   {
-    "id": "module:PIXI.getBounds",
-    "longname": "module:PIXI.getBounds",
+    "id": "PIXI.getBounds",
+    "longname": "PIXI.getBounds",
     "name": "getBounds",
     "scope": "inner",
     "kind": "function",
     "description": "Retrieves the bounds of the displayObject as a rectangle object",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128456,13 +128456,13 @@
     "order": 742
   },
   {
-    "id": "module:PIXI.getLocalBounds",
-    "longname": "module:PIXI.getLocalBounds",
+    "id": "PIXI.getLocalBounds",
+    "longname": "PIXI.getLocalBounds",
     "name": "getLocalBounds",
     "scope": "inner",
     "kind": "function",
     "description": "Retrieves the local bounds of the displayObject as a rectangle object",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -128476,13 +128476,13 @@
     "order": 743
   },
   {
-    "id": "module:PIXI.setStageReference",
-    "longname": "module:PIXI.setStageReference",
+    "id": "PIXI.setStageReference",
+    "longname": "PIXI.setStageReference",
     "name": "setStageReference",
     "scope": "inner",
     "kind": "function",
     "description": "Sets the object's stage reference, the stage this object is connected to",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128497,23 +128497,23 @@
     "order": 744
   },
   {
-    "id": "module:PIXI.preUpdate",
-    "longname": "module:PIXI.preUpdate",
+    "id": "PIXI.preUpdate",
+    "longname": "PIXI.preUpdate",
     "name": "preUpdate",
     "scope": "inner",
     "kind": "function",
     "description": "Empty, to be overridden by classes that require it.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 745
   },
   {
-    "id": "module:PIXI.generateTexture",
-    "longname": "module:PIXI.generateTexture",
+    "id": "PIXI.generateTexture",
+    "longname": "PIXI.generateTexture",
     "name": "generateTexture",
     "scope": "inner",
     "kind": "function",
     "description": "Useful function that returns a texture of the displayObject object that can then be used to create sprites\nThis can be quite useful if your displayObject is static / complicated and needs to be reused multiple times.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128557,23 +128557,23 @@
     "order": 746
   },
   {
-    "id": "module:PIXI.updateCache",
-    "longname": "module:PIXI.updateCache",
+    "id": "PIXI.updateCache",
+    "longname": "PIXI.updateCache",
     "name": "updateCache",
     "scope": "inner",
     "kind": "function",
     "description": "Generates and updates the cached sprite for this object.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 747
   },
   {
-    "id": "module:PIXI.toGlobal",
-    "longname": "module:PIXI.toGlobal",
+    "id": "PIXI.toGlobal",
+    "longname": "PIXI.toGlobal",
     "name": "toGlobal",
     "scope": "inner",
     "kind": "function",
     "description": "Calculates the global position of the display object",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128598,13 +128598,13 @@
     "order": 748
   },
   {
-    "id": "module:PIXI.toLocal",
-    "longname": "module:PIXI.toLocal",
+    "id": "PIXI.toLocal",
+    "longname": "PIXI.toLocal",
     "name": "toLocal",
     "scope": "inner",
     "kind": "function",
     "description": "Calculates the local position of the display object relative to another point",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128639,13 +128639,13 @@
     "order": 749
   },
   {
-    "id": "module:PIXI.addChild",
-    "longname": "module:PIXI.addChild",
+    "id": "PIXI.addChild",
+    "longname": "PIXI.addChild",
     "name": "addChild",
     "scope": "inner",
     "kind": "function",
     "description": "Adds a child to the container.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128670,13 +128670,13 @@
     "order": 758
   },
   {
-    "id": "module:PIXI.addChildAt",
-    "longname": "module:PIXI.addChildAt",
+    "id": "PIXI.addChildAt",
+    "longname": "PIXI.addChildAt",
     "name": "addChildAt",
     "scope": "inner",
     "kind": "function",
     "description": "Adds a child to the container at a specified index. If the index is out of bounds an error will be thrown",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128710,13 +128710,13 @@
     "order": 759
   },
   {
-    "id": "module:PIXI.swapChildren",
-    "longname": "module:PIXI.swapChildren",
+    "id": "PIXI.swapChildren",
+    "longname": "PIXI.swapChildren",
     "name": "swapChildren",
     "scope": "inner",
     "kind": "function",
     "description": "Swaps the position of 2 Display Objects within this container.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128738,13 +128738,13 @@
     "order": 760
   },
   {
-    "id": "module:PIXI.getChildIndex",
-    "longname": "module:PIXI.getChildIndex",
+    "id": "PIXI.getChildIndex",
+    "longname": "PIXI.getChildIndex",
     "name": "getChildIndex",
     "scope": "inner",
     "kind": "function",
     "description": "Returns the index position of a child DisplayObject instance",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128769,13 +128769,13 @@
     "order": 761
   },
   {
-    "id": "module:PIXI.setChildIndex",
-    "longname": "module:PIXI.setChildIndex",
+    "id": "PIXI.setChildIndex",
+    "longname": "PIXI.setChildIndex",
     "name": "setChildIndex",
     "scope": "inner",
     "kind": "function",
     "description": "Changes the position of an existing child in the display object container",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128799,13 +128799,13 @@
     "order": 762
   },
   {
-    "id": "module:PIXI.getChildAt",
-    "longname": "module:PIXI.getChildAt",
+    "id": "PIXI.getChildAt",
+    "longname": "PIXI.getChildAt",
     "name": "getChildAt",
     "scope": "inner",
     "kind": "function",
     "description": "Returns the child at the specified index",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128830,13 +128830,13 @@
     "order": 763
   },
   {
-    "id": "module:PIXI.removeChild",
-    "longname": "module:PIXI.removeChild",
+    "id": "PIXI.removeChild",
+    "longname": "PIXI.removeChild",
     "name": "removeChild",
     "scope": "inner",
     "kind": "function",
     "description": "Removes a child from the container.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128861,13 +128861,13 @@
     "order": 764
   },
   {
-    "id": "module:PIXI.removeChildAt",
-    "longname": "module:PIXI.removeChildAt",
+    "id": "PIXI.removeChildAt",
+    "longname": "PIXI.removeChildAt",
     "name": "removeChildAt",
     "scope": "inner",
     "kind": "function",
     "description": "Removes a child from the specified index position.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128892,13 +128892,13 @@
     "order": 765
   },
   {
-    "id": "module:PIXI.removeChildren",
-    "longname": "module:PIXI.removeChildren",
+    "id": "PIXI.removeChildren",
+    "longname": "PIXI.removeChildren",
     "name": "removeChildren",
     "scope": "inner",
     "kind": "function",
     "description": "Removes all children from this container that are within the begin and end indexes.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128922,13 +128922,13 @@
     "order": 766
   },
   {
-    "id": "module:PIXI.getBounds",
-    "longname": "module:PIXI.getBounds",
+    "id": "PIXI.getBounds",
+    "longname": "PIXI.getBounds",
     "name": "getBounds",
     "scope": "inner",
     "kind": "function",
     "description": "Retrieves the bounds of the displayObjectContainer as a rectangle. The bounds calculation takes all visible children into consideration.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -128942,13 +128942,13 @@
     "order": 767
   },
   {
-    "id": "module:PIXI.getLocalBounds",
-    "longname": "module:PIXI.getLocalBounds",
+    "id": "PIXI.getLocalBounds",
+    "longname": "PIXI.getLocalBounds",
     "name": "getLocalBounds",
     "scope": "inner",
     "kind": "function",
     "description": "Retrieves the non-global local bounds of the displayObjectContainer as a rectangle. The calculation takes all visible children into consideration.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -128962,13 +128962,13 @@
     "order": 768
   },
   {
-    "id": "module:PIXI.setStageReference",
-    "longname": "module:PIXI.setStageReference",
+    "id": "PIXI.setStageReference",
+    "longname": "PIXI.setStageReference",
     "name": "setStageReference",
     "scope": "inner",
     "kind": "function",
     "description": "Sets the containers Stage reference. This is the Stage that this object, and all of its children, is connected to.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -128983,23 +128983,23 @@
     "order": 769
   },
   {
-    "id": "module:PIXI.removeStageReference",
-    "longname": "module:PIXI.removeStageReference",
+    "id": "PIXI.removeStageReference",
+    "longname": "PIXI.removeStageReference",
     "name": "removeStageReference",
     "scope": "inner",
     "kind": "function",
     "description": "Removes the current stage reference from the container and all of its children.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 770
   },
   {
-    "id": "module:PIXI.setTexture",
-    "longname": "module:PIXI.setTexture",
+    "id": "PIXI.setTexture",
+    "longname": "PIXI.setTexture",
     "name": "setTexture",
     "scope": "inner",
     "kind": "function",
     "description": "Sets the texture of the sprite",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129014,13 +129014,13 @@
     "order": 784
   },
   {
-    "id": "module:PIXI.getBounds",
-    "longname": "module:PIXI.getBounds",
+    "id": "PIXI.getBounds",
+    "longname": "PIXI.getBounds",
     "name": "getBounds",
     "scope": "inner",
     "kind": "function",
     "description": "Returns the bounds of the Sprite as a rectangle. The bounds calculation takes the worldTransform into account.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129045,13 +129045,13 @@
     "order": 786
   },
   {
-    "id": "module:PIXI.setBackgroundColor",
-    "longname": "module:PIXI.setBackgroundColor",
+    "id": "PIXI.setBackgroundColor",
+    "longname": "PIXI.setBackgroundColor",
     "name": "setBackgroundColor",
     "scope": "inner",
     "kind": "function",
     "description": "Sets the background color for the stage",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129066,13 +129066,13 @@
     "order": 798
   },
   {
-    "id": "module:PIXI.hex2rgb",
-    "longname": "module:PIXI.hex2rgb",
+    "id": "PIXI.hex2rgb",
+    "longname": "PIXI.hex2rgb",
     "name": "hex2rgb",
     "scope": "inner",
     "kind": "function",
     "description": "Converts a hex color number to an [R, G, B] array",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129086,13 +129086,13 @@
     "order": 799
   },
   {
-    "id": "module:PIXI.rgb2hex",
-    "longname": "module:PIXI.rgb2hex",
+    "id": "PIXI.rgb2hex",
+    "longname": "PIXI.rgb2hex",
     "name": "rgb2hex",
     "scope": "inner",
     "kind": "function",
     "description": "Converts a color as an [R, G, B] array to a hex number",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129106,13 +129106,13 @@
     "order": 800
   },
   {
-    "id": "module:PIXI.canUseNewCanvasBlendModes",
-    "longname": "module:PIXI.canUseNewCanvasBlendModes",
+    "id": "PIXI.canUseNewCanvasBlendModes",
+    "longname": "PIXI.canUseNewCanvasBlendModes",
     "name": "canUseNewCanvasBlendModes",
     "scope": "inner",
     "kind": "function",
     "description": "Checks whether the Canvas BlendModes are supported by the current browser for drawImage",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -129126,13 +129126,13 @@
     "order": 801
   },
   {
-    "id": "module:PIXI.getNextPowerOfTwo",
-    "longname": "module:PIXI.getNextPowerOfTwo",
+    "id": "PIXI.getNextPowerOfTwo",
+    "longname": "PIXI.getNextPowerOfTwo",
     "name": "getNextPowerOfTwo",
     "scope": "inner",
     "kind": "function",
     "description": "Given a number, this function returns the closest number that is a power of two\nthis function is taken from Starling Framework as its pretty neat ;)",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129156,13 +129156,13 @@
     "order": 802
   },
   {
-    "id": "module:PIXI.isPowerOfTwo",
-    "longname": "module:PIXI.isPowerOfTwo",
+    "id": "PIXI.isPowerOfTwo",
+    "longname": "PIXI.isPowerOfTwo",
     "name": "isPowerOfTwo",
     "scope": "inner",
     "kind": "function",
     "description": "checks if the given width and height make a power of two texture",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129193,180 +129193,180 @@
     "order": 803
   },
   {
-    "id": "module:PIXI.Triangulate",
-    "longname": "module:PIXI.Triangulate",
+    "id": "PIXI.Triangulate",
+    "longname": "PIXI.Triangulate",
     "name": "Triangulate",
     "scope": "inner",
     "kind": "function",
     "description": "Triangulates shapes for webGL graphic fills.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 806
   },
   {
-    "id": "module:PIXI.init",
-    "longname": "module:PIXI.init",
+    "id": "PIXI.init",
+    "longname": "PIXI.init",
     "name": "init",
     "scope": "inner",
     "kind": "function",
     "description": "Initialises the shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 824
   },
   {
-    "id": "module:PIXI.initUniforms",
-    "longname": "module:PIXI.initUniforms",
+    "id": "PIXI.initUniforms",
+    "longname": "PIXI.initUniforms",
     "name": "initUniforms",
     "scope": "inner",
     "kind": "function",
     "description": "Initialises the shader uniform values.\n\nUniforms are specified in the GLSL_ES Specification: http://www.khronos.org/registry/webgl/specs/latest/1.0/\nhttp://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 825
   },
   {
-    "id": "module:PIXI.initSampler2D",
-    "longname": "module:PIXI.initSampler2D",
+    "id": "PIXI.initSampler2D",
+    "longname": "PIXI.initSampler2D",
     "name": "initSampler2D",
     "scope": "inner",
     "kind": "function",
     "description": "Initialises a Sampler2D uniform (which may only be available later on after initUniforms once the texture has loaded)",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 826
   },
   {
-    "id": "module:PIXI.syncUniforms",
-    "longname": "module:PIXI.syncUniforms",
+    "id": "PIXI.syncUniforms",
+    "longname": "PIXI.syncUniforms",
     "name": "syncUniforms",
     "scope": "inner",
     "kind": "function",
     "description": "Updates the shader uniform values.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 827
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys the shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 828
   },
   {
-    "id": "module:PIXI.init",
-    "longname": "module:PIXI.init",
+    "id": "PIXI.init",
+    "longname": "PIXI.init",
     "name": "init",
     "scope": "inner",
     "kind": "function",
     "description": "Initialises the shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 838
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys the shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 839
   },
   {
-    "id": "module:PIXI.init",
-    "longname": "module:PIXI.init",
+    "id": "PIXI.init",
+    "longname": "PIXI.init",
     "name": "init",
     "scope": "inner",
     "kind": "function",
     "description": "Initialises the shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 847
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys the shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 848
   },
   {
-    "id": "module:PIXI.init",
-    "longname": "module:PIXI.init",
+    "id": "PIXI.init",
+    "longname": "PIXI.init",
     "name": "init",
     "scope": "inner",
     "kind": "function",
     "description": "Initialises the shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 856
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys the shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 857
   },
   {
-    "id": "module:PIXI.init",
-    "longname": "module:PIXI.init",
+    "id": "PIXI.init",
+    "longname": "PIXI.init",
     "name": "init",
     "scope": "inner",
     "kind": "function",
     "description": "Initialises the shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 865
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys the shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 866
   },
   {
-    "id": "module:PIXI.reset",
-    "longname": "module:PIXI.reset",
+    "id": "PIXI.reset",
+    "longname": "PIXI.reset",
     "name": "reset",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 880
   },
   {
-    "id": "module:PIXI.upload",
-    "longname": "module:PIXI.upload",
+    "id": "PIXI.upload",
+    "longname": "PIXI.upload",
     "name": "upload",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 881
   },
   {
-    "id": "module:PIXI.initContext",
-    "longname": "module:PIXI.initContext",
+    "id": "PIXI.initContext",
+    "longname": "PIXI.initContext",
     "name": "initContext",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 904
   },
   {
-    "id": "module:PIXI.render",
-    "longname": "module:PIXI.render",
+    "id": "PIXI.render",
+    "longname": "PIXI.render",
     "name": "render",
     "scope": "inner",
     "kind": "function",
     "description": "Renders the stage to its webGL view",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129381,13 +129381,13 @@
     "order": 905
   },
   {
-    "id": "module:PIXI.renderDisplayObject",
-    "longname": "module:PIXI.renderDisplayObject",
+    "id": "PIXI.renderDisplayObject",
+    "longname": "PIXI.renderDisplayObject",
     "name": "renderDisplayObject",
     "scope": "inner",
     "kind": "function",
     "description": "Renders a Display Object.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129420,13 +129420,13 @@
     "order": 906
   },
   {
-    "id": "module:PIXI.resize",
-    "longname": "module:PIXI.resize",
+    "id": "PIXI.resize",
+    "longname": "PIXI.resize",
     "name": "resize",
     "scope": "inner",
     "kind": "function",
     "description": "Resizes the webGL view to the specified width and height.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129450,13 +129450,13 @@
     "order": 907
   },
   {
-    "id": "module:PIXI.updateTexture",
-    "longname": "module:PIXI.updateTexture",
+    "id": "PIXI.updateTexture",
+    "longname": "PIXI.updateTexture",
     "name": "updateTexture",
     "scope": "inner",
     "kind": "function",
     "description": "Updates and Creates a WebGL texture for the renderers context.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129471,33 +129471,33 @@
     "order": 908
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Removes everything from the renderer (event listeners, spritebatch, etc...)",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 909
   },
   {
-    "id": "module:PIXI.mapBlendModes",
-    "longname": "module:PIXI.mapBlendModes",
+    "id": "PIXI.mapBlendModes",
+    "longname": "PIXI.mapBlendModes",
     "name": "mapBlendModes",
     "scope": "inner",
     "kind": "function",
     "description": "Maps Pixi blend modes to WebGL blend modes.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 910
   },
   {
-    "id": "module:PIXI.setContext",
-    "longname": "module:PIXI.setContext",
+    "id": "PIXI.setContext",
+    "longname": "PIXI.setContext",
     "name": "setContext",
     "scope": "inner",
     "kind": "function",
     "description": "Sets the WebGL Context.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129512,13 +129512,13 @@
     "order": 914
   },
   {
-    "id": "module:PIXI.setBlendMode",
-    "longname": "module:PIXI.setBlendMode",
+    "id": "PIXI.setBlendMode",
+    "longname": "PIXI.setBlendMode",
     "name": "setBlendMode",
     "scope": "inner",
     "kind": "function",
     "description": "Sets-up the given blendMode from WebGL's point of view.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129533,23 +129533,23 @@
     "order": 915
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys this object.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 916
   },
   {
-    "id": "module:PIXI.setContext",
-    "longname": "module:PIXI.setContext",
+    "id": "PIXI.setContext",
+    "longname": "PIXI.setContext",
     "name": "setContext",
     "scope": "inner",
     "kind": "function",
     "description": "Sets the drawing context to the one given in parameter.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129564,13 +129564,13 @@
     "order": 918
   },
   {
-    "id": "module:PIXI.pushMask",
-    "longname": "module:PIXI.pushMask",
+    "id": "PIXI.pushMask",
+    "longname": "PIXI.pushMask",
     "name": "pushMask",
     "scope": "inner",
     "kind": "function",
     "description": "Applies the Mask and adds it to the current filter stack.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129592,13 +129592,13 @@
     "order": 919
   },
   {
-    "id": "module:PIXI.popMask",
-    "longname": "module:PIXI.popMask",
+    "id": "PIXI.popMask",
+    "longname": "PIXI.popMask",
     "name": "popMask",
     "scope": "inner",
     "kind": "function",
     "description": "Removes the last filter from the filter stack and doesn't return it.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129621,23 +129621,23 @@
     "order": 920
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys the mask stack.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 921
   },
   {
-    "id": "module:PIXI.setContext",
-    "longname": "module:PIXI.setContext",
+    "id": "PIXI.setContext",
+    "longname": "PIXI.setContext",
     "name": "setContext",
     "scope": "inner",
     "kind": "function",
     "description": "Sets the drawing context to the one given in parameter.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129652,13 +129652,13 @@
     "order": 923
   },
   {
-    "id": "module:PIXI.pushMask",
-    "longname": "module:PIXI.pushMask",
+    "id": "PIXI.pushMask",
+    "longname": "PIXI.pushMask",
     "name": "pushMask",
     "scope": "inner",
     "kind": "function",
     "description": "Applies the Mask and adds it to the current filter stack.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129688,13 +129688,13 @@
     "order": 924
   },
   {
-    "id": "module:PIXI.bindGraphics",
-    "longname": "module:PIXI.bindGraphics",
+    "id": "PIXI.bindGraphics",
+    "longname": "PIXI.bindGraphics",
     "name": "bindGraphics",
     "scope": "inner",
     "kind": "function",
     "description": "TODO this does not belong here!",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129724,12 +129724,12 @@
     "order": 925
   },
   {
-    "id": "module:PIXI.popStencil",
-    "longname": "module:PIXI.popStencil",
+    "id": "PIXI.popStencil",
+    "longname": "PIXI.popStencil",
     "name": "popStencil",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129759,23 +129759,23 @@
     "order": 926
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys the mask stack.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 927
   },
   {
-    "id": "module:PIXI.setContext",
-    "longname": "module:PIXI.setContext",
+    "id": "PIXI.setContext",
+    "longname": "PIXI.setContext",
     "name": "setContext",
     "scope": "inner",
     "kind": "function",
     "description": "Initialises the context and the properties.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129790,13 +129790,13 @@
     "order": 933
   },
   {
-    "id": "module:PIXI.setAttribs",
-    "longname": "module:PIXI.setAttribs",
+    "id": "PIXI.setAttribs",
+    "longname": "PIXI.setAttribs",
     "name": "setAttribs",
     "scope": "inner",
     "kind": "function",
     "description": "Takes the attributes given in parameters.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129811,13 +129811,13 @@
     "order": 934
   },
   {
-    "id": "module:PIXI.setShader",
-    "longname": "module:PIXI.setShader",
+    "id": "PIXI.setShader",
+    "longname": "PIXI.setShader",
     "name": "setShader",
     "scope": "inner",
     "kind": "function",
     "description": "Sets the current shader.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129831,22 +129831,22 @@
     "order": 935
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys this object.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 936
   },
   {
-    "id": "module:PIXI.setContext",
-    "longname": "module:PIXI.setContext",
+    "id": "PIXI.setContext",
+    "longname": "PIXI.setContext",
     "name": "setContext",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129861,12 +129861,12 @@
     "order": 954
   },
   {
-    "id": "module:PIXI.begin",
-    "longname": "module:PIXI.begin",
+    "id": "PIXI.begin",
+    "longname": "PIXI.begin",
     "name": "begin",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129881,21 +129881,21 @@
     "order": 955
   },
   {
-    "id": "module:PIXI.end",
-    "longname": "module:PIXI.end",
+    "id": "PIXI.end",
+    "longname": "PIXI.end",
     "name": "end",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 956
   },
   {
-    "id": "module:PIXI.render",
-    "longname": "module:PIXI.render",
+    "id": "PIXI.render",
+    "longname": "PIXI.render",
     "name": "render",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129920,13 +129920,13 @@
     "order": 957
   },
   {
-    "id": "module:PIXI.renderTilingSprite",
-    "longname": "module:PIXI.renderTilingSprite",
+    "id": "PIXI.renderTilingSprite",
+    "longname": "PIXI.renderTilingSprite",
     "name": "renderTilingSprite",
     "scope": "inner",
     "kind": "function",
     "description": "Renders a TilingSprite using the spriteBatch.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129941,22 +129941,22 @@
     "order": 958
   },
   {
-    "id": "module:PIXI.flush",
-    "longname": "module:PIXI.flush",
+    "id": "PIXI.flush",
+    "longname": "PIXI.flush",
     "name": "flush",
     "scope": "inner",
     "kind": "function",
     "description": "Renders the content and empties the current batch.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 959
   },
   {
-    "id": "module:PIXI.renderBatch",
-    "longname": "module:PIXI.renderBatch",
+    "id": "PIXI.renderBatch",
+    "longname": "PIXI.renderBatch",
     "name": "renderBatch",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -129986,41 +129986,41 @@
     "order": 960
   },
   {
-    "id": "module:PIXI.stop",
-    "longname": "module:PIXI.stop",
+    "id": "PIXI.stop",
+    "longname": "PIXI.stop",
     "name": "stop",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 961
   },
   {
-    "id": "module:PIXI.start",
-    "longname": "module:PIXI.start",
+    "id": "PIXI.start",
+    "longname": "PIXI.start",
     "name": "start",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 962
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys the SpriteBatch.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 963
   },
   {
-    "id": "module:PIXI.setContext",
-    "longname": "module:PIXI.setContext",
+    "id": "PIXI.setContext",
+    "longname": "PIXI.setContext",
     "name": "setContext",
     "scope": "inner",
     "kind": "function",
     "description": "Sets the WebGL Context.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130035,12 +130035,12 @@
     "order": 980
   },
   {
-    "id": "module:PIXI.begin",
-    "longname": "module:PIXI.begin",
+    "id": "PIXI.begin",
+    "longname": "PIXI.begin",
     "name": "begin",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130062,21 +130062,21 @@
     "order": 981
   },
   {
-    "id": "module:PIXI.end",
-    "longname": "module:PIXI.end",
+    "id": "PIXI.end",
+    "longname": "PIXI.end",
     "name": "end",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 982
   },
   {
-    "id": "module:PIXI.render",
-    "longname": "module:PIXI.render",
+    "id": "PIXI.render",
+    "longname": "PIXI.render",
     "name": "render",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130090,12 +130090,12 @@
     "order": 983
   },
   {
-    "id": "module:PIXI.renderSprite",
-    "longname": "module:PIXI.renderSprite",
+    "id": "PIXI.renderSprite",
+    "longname": "PIXI.renderSprite",
     "name": "renderSprite",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130109,40 +130109,40 @@
     "order": 984
   },
   {
-    "id": "module:PIXI.flush",
-    "longname": "module:PIXI.flush",
+    "id": "PIXI.flush",
+    "longname": "PIXI.flush",
     "name": "flush",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 985
   },
   {
-    "id": "module:PIXI.stop",
-    "longname": "module:PIXI.stop",
+    "id": "PIXI.stop",
+    "longname": "PIXI.stop",
     "name": "stop",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 986
   },
   {
-    "id": "module:PIXI.start",
-    "longname": "module:PIXI.start",
+    "id": "PIXI.start",
+    "longname": "PIXI.start",
     "name": "start",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 987
   },
   {
-    "id": "module:PIXI.setContext",
-    "longname": "module:PIXI.setContext",
+    "id": "PIXI.setContext",
+    "longname": "PIXI.setContext",
     "name": "setContext",
     "scope": "inner",
     "kind": "function",
     "description": "Initialises the context and the properties.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130157,12 +130157,12 @@
     "order": 992
   },
   {
-    "id": "module:PIXI.begin",
-    "longname": "module:PIXI.begin",
+    "id": "PIXI.begin",
+    "longname": "PIXI.begin",
     "name": "begin",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130184,13 +130184,13 @@
     "order": 993
   },
   {
-    "id": "module:PIXI.pushFilter",
-    "longname": "module:PIXI.pushFilter",
+    "id": "PIXI.pushFilter",
+    "longname": "PIXI.pushFilter",
     "name": "pushFilter",
     "scope": "inner",
     "kind": "function",
     "description": "Applies the filter and adds it to the current filter stack.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130205,23 +130205,23 @@
     "order": 994
   },
   {
-    "id": "module:PIXI.popFilter",
-    "longname": "module:PIXI.popFilter",
+    "id": "PIXI.popFilter",
+    "longname": "PIXI.popFilter",
     "name": "popFilter",
     "scope": "inner",
     "kind": "function",
     "description": "Removes the last filter from the filter stack and doesn't return it.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 995
   },
   {
-    "id": "module:PIXI.applyFilterPass",
-    "longname": "module:PIXI.applyFilterPass",
+    "id": "PIXI.applyFilterPass",
+    "longname": "PIXI.applyFilterPass",
     "name": "applyFilterPass",
     "scope": "inner",
     "kind": "function",
     "description": "Applies the filter to the specified area.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130263,43 +130263,43 @@
     "order": 996
   },
   {
-    "id": "module:PIXI.initShaderBuffers",
-    "longname": "module:PIXI.initShaderBuffers",
+    "id": "PIXI.initShaderBuffers",
+    "longname": "PIXI.initShaderBuffers",
     "name": "initShaderBuffers",
     "scope": "inner",
     "kind": "function",
     "description": "Initialises the shader buffers.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 997
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys the filter and removes it from the filter stack.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 998
   },
   {
-    "id": "module:PIXI.clear",
-    "longname": "module:PIXI.clear",
+    "id": "PIXI.clear",
+    "longname": "PIXI.clear",
     "name": "clear",
     "scope": "inner",
     "kind": "function",
     "description": "Clears the filter texture.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1005
   },
   {
-    "id": "module:PIXI.resize",
-    "longname": "module:PIXI.resize",
+    "id": "PIXI.resize",
+    "longname": "PIXI.resize",
     "name": "resize",
     "scope": "inner",
     "kind": "function",
     "description": "Resizes the texture to the specified width and height",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130323,23 +130323,23 @@
     "order": 1006
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys the filter texture.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1007
   },
   {
-    "id": "module:PIXI.resize",
-    "longname": "module:PIXI.resize",
+    "id": "PIXI.resize",
+    "longname": "PIXI.resize",
     "name": "resize",
     "scope": "inner",
     "kind": "function",
     "description": "Resizes the canvas to the specified width and height.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130363,13 +130363,13 @@
     "order": 1015
   },
   {
-    "id": "module:PIXI.pushMask",
-    "longname": "module:PIXI.pushMask",
+    "id": "PIXI.pushMask",
+    "longname": "PIXI.pushMask",
     "name": "pushMask",
     "scope": "inner",
     "kind": "function",
     "description": "This method adds it to the current stack of masks.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130393,13 +130393,13 @@
     "order": 1018
   },
   {
-    "id": "module:PIXI.popMask",
-    "longname": "module:PIXI.popMask",
+    "id": "PIXI.popMask",
+    "longname": "PIXI.popMask",
     "name": "popMask",
     "scope": "inner",
     "kind": "function",
     "description": "Restores the current drawing context to the state it was before the mask was applied.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130414,13 +130414,13 @@
     "order": 1019
   },
   {
-    "id": "module:PIXI.render",
-    "longname": "module:PIXI.render",
+    "id": "PIXI.render",
+    "longname": "PIXI.render",
     "name": "render",
     "scope": "inner",
     "kind": "function",
     "description": "Renders the Stage to this canvas view",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130435,13 +130435,13 @@
     "order": 1045
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Removes everything from the renderer and optionally removes the Canvas DOM element.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130458,13 +130458,13 @@
     "order": 1046
   },
   {
-    "id": "module:PIXI.resize",
-    "longname": "module:PIXI.resize",
+    "id": "PIXI.resize",
+    "longname": "PIXI.resize",
     "name": "resize",
     "scope": "inner",
     "kind": "function",
     "description": "Resizes the canvas view to the specified width and height",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130488,13 +130488,13 @@
     "order": 1047
   },
   {
-    "id": "module:PIXI.forceLoaded",
-    "longname": "module:PIXI.forceLoaded",
+    "id": "PIXI.forceLoaded",
+    "longname": "PIXI.forceLoaded",
     "name": "forceLoaded",
     "scope": "inner",
     "kind": "function",
     "description": "Forces this BaseTexture to be set as loaded, with the given width and height.\nThen calls BaseTexture.dirty.\nImportant for when you don't want to modify the source object by forcing in `complete` or dimension properties it may not have.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130518,23 +130518,23 @@
     "order": 1067
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys this base texture",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1068
   },
   {
-    "id": "module:PIXI.updateSourceImage",
-    "longname": "module:PIXI.updateSourceImage",
+    "id": "PIXI.updateSourceImage",
+    "longname": "PIXI.updateSourceImage",
     "name": "updateSourceImage",
     "scope": "inner",
     "kind": "function",
     "description": "Changes the source image of the texture",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130549,33 +130549,33 @@
     "order": 1069
   },
   {
-    "id": "module:PIXI.dirty",
-    "longname": "module:PIXI.dirty",
+    "id": "PIXI.dirty",
+    "longname": "PIXI.dirty",
     "name": "dirty",
     "scope": "inner",
     "kind": "function",
     "description": "Sets all glTextures to be dirty.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1070
   },
   {
-    "id": "module:PIXI.unloadFromGPU",
-    "longname": "module:PIXI.unloadFromGPU",
+    "id": "PIXI.unloadFromGPU",
+    "longname": "PIXI.unloadFromGPU",
     "name": "unloadFromGPU",
     "scope": "inner",
     "kind": "function",
     "description": "Removes the base texture from the GPU, useful for managing resources on the GPU.\nAtexture is still 100% usable and will simply be reuploaded if there is a sprite on screen that is using it.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1071
   },
   {
-    "id": "module:PIXI.destroy",
-    "longname": "module:PIXI.destroy",
+    "id": "PIXI.destroy",
+    "longname": "PIXI.destroy",
     "name": "destroy",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys this texture",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130590,13 +130590,13 @@
     "order": 1091
   },
   {
-    "id": "module:PIXI.setFrame",
-    "longname": "module:PIXI.setFrame",
+    "id": "PIXI.setFrame",
+    "longname": "PIXI.setFrame",
     "name": "setFrame",
     "scope": "inner",
     "kind": "function",
     "description": "Specifies the region of the baseTexture that this texture will use.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130611,13 +130611,13 @@
     "order": 1092
   },
   {
-    "id": "module:PIXI.resize",
-    "longname": "module:PIXI.resize",
+    "id": "PIXI.resize",
+    "longname": "PIXI.resize",
     "name": "resize",
     "scope": "inner",
     "kind": "function",
     "description": "Resizes the RenderTexture.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130650,23 +130650,23 @@
     "order": 1109
   },
   {
-    "id": "module:PIXI.clear",
-    "longname": "module:PIXI.clear",
+    "id": "PIXI.clear",
+    "longname": "PIXI.clear",
     "name": "clear",
     "scope": "inner",
     "kind": "function",
     "description": "Clears the RenderTexture.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1110
   },
   {
-    "id": "module:PIXI.getImage",
-    "longname": "module:PIXI.getImage",
+    "id": "PIXI.getImage",
+    "longname": "PIXI.getImage",
     "name": "getImage",
     "scope": "inner",
     "kind": "function",
     "description": "Will return a HTML Image of the texture",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -130679,13 +130679,13 @@
     "order": 1113
   },
   {
-    "id": "module:PIXI.getBase64",
-    "longname": "module:PIXI.getBase64",
+    "id": "PIXI.getBase64",
+    "longname": "PIXI.getBase64",
     "name": "getBase64",
     "scope": "inner",
     "kind": "function",
     "description": "Will return a base64 encoded string of this texture. It works by calling RenderTexture.getCanvas and then running toDataURL on that.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -130699,13 +130699,13 @@
     "order": 1114
   },
   {
-    "id": "module:PIXI.getCanvas",
-    "longname": "module:PIXI.getCanvas",
+    "id": "PIXI.getCanvas",
+    "longname": "PIXI.getCanvas",
     "name": "getCanvas",
     "scope": "inner",
     "kind": "function",
     "description": "Creates a Canvas element, renders this RenderTexture to it and then returns it.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -130719,23 +130719,23 @@
     "order": 1115
   },
   {
-    "id": "module:PIXI.syncUniforms",
-    "longname": "module:PIXI.syncUniforms",
+    "id": "PIXI.syncUniforms",
+    "longname": "PIXI.syncUniforms",
     "name": "syncUniforms",
     "scope": "inner",
     "kind": "function",
     "description": "Syncs the uniforms between the class object and the shaders.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 1124
   },
   {
-    "id": "module:PIXI.getBounds",
-    "longname": "module:PIXI.getBounds",
+    "id": "PIXI.getBounds",
+    "longname": "PIXI.getBounds",
     "name": "getBounds",
     "scope": "inner",
     "kind": "function",
     "description": "Returns the bounds of the mesh as a rectangle. The bounds calculation takes the worldTransform into account.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130760,12 +130760,12 @@
     "order": 1133
   },
   {
-    "id": "module:PIXI.generateTilingTexture",
-    "longname": "module:PIXI.generateTilingTexture",
+    "id": "PIXI.generateTilingTexture",
+    "longname": "PIXI.generateTilingTexture",
     "name": "generateTilingTexture",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130780,13 +130780,13 @@
     "order": 1155
   },
   {
-    "id": "module:PIXI.getBounds",
-    "longname": "module:PIXI.getBounds",
+    "id": "PIXI.getBounds",
+    "longname": "PIXI.getBounds",
     "name": "getBounds",
     "scope": "inner",
     "kind": "function",
     "description": "Returns the framing rectangle of the sprite as a PIXI.Rectangle object",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -130800,13 +130800,13 @@
     "order": 1156
   },
   {
-    "id": "module:PIXI.lineStyle",
-    "longname": "module:PIXI.lineStyle",
+    "id": "PIXI.lineStyle",
+    "longname": "PIXI.lineStyle",
     "name": "lineStyle",
     "scope": "inner",
     "kind": "function",
     "description": "Specifies the line style used for subsequent calls to Graphics methods such as the lineTo() method or the drawCircle() method.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130848,13 +130848,13 @@
     "order": 2953
   },
   {
-    "id": "module:PIXI.moveTo",
-    "longname": "module:PIXI.moveTo",
+    "id": "PIXI.moveTo",
+    "longname": "PIXI.moveTo",
     "name": "moveTo",
     "scope": "inner",
     "kind": "function",
     "description": "Moves the current drawing position to x, y.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130887,13 +130887,13 @@
     "order": 2954
   },
   {
-    "id": "module:PIXI.lineTo",
-    "longname": "module:PIXI.lineTo",
+    "id": "PIXI.lineTo",
+    "longname": "PIXI.lineTo",
     "name": "lineTo",
     "scope": "inner",
     "kind": "function",
     "description": "Draws a line using the current line style from the current drawing position to (x, y);\nThe current drawing position is then set to (x, y).",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130926,13 +130926,13 @@
     "order": 2955
   },
   {
-    "id": "module:PIXI.quadraticCurveTo",
-    "longname": "module:PIXI.quadraticCurveTo",
+    "id": "PIXI.quadraticCurveTo",
+    "longname": "PIXI.quadraticCurveTo",
     "name": "quadraticCurveTo",
     "scope": "inner",
     "kind": "function",
     "description": "Calculate the points for a quadratic bezier curve and then draws it.\nBased on: https://stackoverflow.com/questions/785097/how-do-i-implement-a-bezier-curve-in-c",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -130983,13 +130983,13 @@
     "order": 2956
   },
   {
-    "id": "module:PIXI.bezierCurveTo",
-    "longname": "module:PIXI.bezierCurveTo",
+    "id": "PIXI.bezierCurveTo",
+    "longname": "PIXI.bezierCurveTo",
     "name": "bezierCurveTo",
     "scope": "inner",
     "kind": "function",
     "description": "Calculate the points for a bezier curve and then draws it.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -131058,13 +131058,13 @@
     "order": 2957
   },
   {
-    "id": "module:PIXI.arc",
-    "longname": "module:PIXI.arc",
+    "id": "PIXI.arc",
+    "longname": "PIXI.arc",
     "name": "arc",
     "scope": "inner",
     "kind": "function",
     "description": "The arc method creates an arc/curve (used to create circles, or parts of circles).",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -131133,13 +131133,13 @@
     "order": 2958
   },
   {
-    "id": "module:PIXI.beginFill",
-    "longname": "module:PIXI.beginFill",
+    "id": "PIXI.beginFill",
+    "longname": "PIXI.beginFill",
     "name": "beginFill",
     "scope": "inner",
     "kind": "function",
     "description": "Specifies a simple one-color fill that subsequent calls to other Graphics methods\n(such as lineTo() or drawCircle()) use when drawing.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -131172,13 +131172,13 @@
     "order": 2959
   },
   {
-    "id": "module:PIXI.endFill",
-    "longname": "module:PIXI.endFill",
+    "id": "PIXI.endFill",
+    "longname": "PIXI.endFill",
     "name": "endFill",
     "scope": "inner",
     "kind": "function",
     "description": "Applies a fill to the lines and shapes that were added since the last call to the beginFill() method.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -131191,12 +131191,12 @@
     "order": 2960
   },
   {
-    "id": "module:PIXI.drawRect",
-    "longname": "module:PIXI.drawRect",
+    "id": "PIXI.drawRect",
+    "longname": "PIXI.drawRect",
     "name": "drawRect",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -131247,12 +131247,12 @@
     "order": 2961
   },
   {
-    "id": "module:PIXI.drawRoundedRect",
-    "longname": "module:PIXI.drawRoundedRect",
+    "id": "PIXI.drawRoundedRect",
+    "longname": "PIXI.drawRoundedRect",
     "name": "drawRoundedRect",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -131303,13 +131303,13 @@
     "order": 2962
   },
   {
-    "id": "module:PIXI.drawCircle",
-    "longname": "module:PIXI.drawCircle",
+    "id": "PIXI.drawCircle",
+    "longname": "PIXI.drawCircle",
     "name": "drawCircle",
     "scope": "inner",
     "kind": "function",
     "description": "Draws a circle.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -131351,13 +131351,13 @@
     "order": 2963
   },
   {
-    "id": "module:PIXI.drawEllipse",
-    "longname": "module:PIXI.drawEllipse",
+    "id": "PIXI.drawEllipse",
+    "longname": "PIXI.drawEllipse",
     "name": "drawEllipse",
     "scope": "inner",
     "kind": "function",
     "description": "Draws an ellipse.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -131408,13 +131408,13 @@
     "order": 2964
   },
   {
-    "id": "module:PIXI.drawPolygon",
-    "longname": "module:PIXI.drawPolygon",
+    "id": "PIXI.drawPolygon",
+    "longname": "PIXI.drawPolygon",
     "name": "drawPolygon",
     "scope": "inner",
     "kind": "function",
     "description": "Draws a polygon using the given path.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -131439,13 +131439,13 @@
     "order": 2965
   },
   {
-    "id": "module:PIXI.clear",
-    "longname": "module:PIXI.clear",
+    "id": "PIXI.clear",
+    "longname": "PIXI.clear",
     "name": "clear",
     "scope": "inner",
     "kind": "function",
     "description": "Clears the graphics that were drawn to this Graphics object, and resets fill and line style settings.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -131458,13 +131458,13 @@
     "order": 2966
   },
   {
-    "id": "module:PIXI.generateTexture",
-    "longname": "module:PIXI.generateTexture",
+    "id": "PIXI.generateTexture",
+    "longname": "PIXI.generateTexture",
     "name": "generateTexture",
     "scope": "inner",
     "kind": "function",
     "description": "Useful function that returns a texture of the graphics object that can then be used to create sprites\nThis can be quite useful if your geometry is complicated and needs to be reused multiple times.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -131498,13 +131498,13 @@
     "order": 2967
   },
   {
-    "id": "module:PIXI.getBounds",
-    "longname": "module:PIXI.getBounds",
+    "id": "PIXI.getBounds",
+    "longname": "PIXI.getBounds",
     "name": "getBounds",
     "scope": "inner",
     "kind": "function",
     "description": "Retrieves the bounds of the graphic shape as a rectangle object",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "returns": [
       {
         "type": {
@@ -131518,33 +131518,33 @@
     "order": 2970
   },
   {
-    "id": "module:PIXI.updateLocalBounds",
-    "longname": "module:PIXI.updateLocalBounds",
+    "id": "PIXI.updateLocalBounds",
+    "longname": "PIXI.updateLocalBounds",
     "name": "updateLocalBounds",
     "scope": "inner",
     "kind": "function",
     "description": "Update the bounds of the object",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 2972
   },
   {
-    "id": "module:PIXI.destroyCachedSprite",
-    "longname": "module:PIXI.destroyCachedSprite",
+    "id": "PIXI.destroyCachedSprite",
+    "longname": "PIXI.destroyCachedSprite",
     "name": "destroyCachedSprite",
     "scope": "inner",
     "kind": "function",
     "description": "Destroys a previous cached sprite.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "order": 2975
   },
   {
-    "id": "module:PIXI.drawShape",
-    "longname": "module:PIXI.drawShape",
+    "id": "PIXI.drawShape",
+    "longname": "PIXI.drawShape",
     "name": "drawShape",
     "scope": "inner",
     "kind": "function",
     "description": "Draws the given shape to this Graphics object. Can be any of Circle, Rectangle, Ellipse, Line or Polygon.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "params": [
       {
         "type": {
@@ -131689,13 +131689,13 @@
     "order": 3247
   },
   {
-    "id": "module:PIXI.DisplayObject",
-    "longname": "module:PIXI.DisplayObject",
+    "id": "PIXI.DisplayObject",
+    "longname": "PIXI.DisplayObject",
     "name": "DisplayObject",
     "scope": "inner",
     "kind": "typedef",
     "description": "A display object is any object that can be rendered in the Phaser/pixi.js scene graph.\n\nThis includes {@link Phaser.Group} (groups are display objects!),\n{@link Phaser.Sprite}, {@link Phaser.Button}, {@link Phaser.Text}\nas well as {@link PIXI.DisplayObject} and all derived types.",
-    "memberof": "module:PIXI",
+    "memberof": "PIXI",
     "type": {
       "names": [
         "object"

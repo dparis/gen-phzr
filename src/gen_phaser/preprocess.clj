@@ -61,6 +61,20 @@
                    (str "* @param canvas {HTMLCanvasElement} the current canvas\n"
                         " * @memberof PIXI.CanvasTinter"))))
 
+(defn ^:private fix-bad-array-types
+  [js]
+  (str/replace js #"@type\s+Array\((.*?)\)" "@type {Array.$1}"))
+
+(defn ^:private fix-bad-return-types
+  [js]
+  (str/replace js #"@return\s+\{Array\((.*?)\)\}" "@return {Array.$1}"))
+
+(defn ^:private rename-like-params
+  [js]
+  (-> js
+      (str/replace #"\{Rectangle\-like\}" "{Rectangle}")
+      (str/replace #"\{Bounds\-like\}" "{Bounds}")))
+
 (defn preprocess-js
   [js]
   (-> js
@@ -68,7 +82,10 @@
       (fix-empty-todo-tags)
       (fix-empty-class-tags)
       (fix-empty-property-tags)
-      (add-missing-memberof)))
+      (add-missing-memberof)
+      (fix-bad-array-types)
+      (fix-bad-return-types)
+      (rename-like-params)))
 
 (defn ^:private remove-anonymous-prefixes
   [json]
@@ -81,6 +98,10 @@
       (str/replace #"Box\~" "Box.")
       (str/replace #"initialize\~" "initialize.")))
 
+(defn ^:private remove-module-prefixes
+  [json]
+  (str/replace json #"module\:" ""))
+
 (defn ^:private update-anonymous-memberof
   [json]
   (str/replace json
@@ -92,4 +113,5 @@
   (-> json
       (remove-anonymous-prefixes)
       (replace-tildes)
+      (remove-module-prefixes)
       (update-anonymous-memberof)))

@@ -21501,7 +21501,7 @@
     "memberof": "<anonymous>~PIXI.DisplayObjectContainer",
     "type": {
       "names": [
-        "Array(DisplayObject)"
+        "Array.DisplayObject"
       ]
     },
     "readonly": true,
@@ -29700,7 +29700,7 @@
       {
         "type": {
           "names": [
-            "Bounds-like"
+            "Bounds"
           ]
         },
         "name": "margin"
@@ -122667,7 +122667,7 @@
       {
         "type": {
           "names": [
-            "Rectangle-like"
+            "Rectangle"
           ]
         },
         "description": "The first Rectangle object.",
@@ -122676,7 +122676,7 @@
       {
         "type": {
           "names": [
-            "Rectangle-like"
+            "Rectangle"
           ]
         },
         "description": "The second Rectangle object.",
