@@ -16,7 +16,7 @@
   (#{false ""} (:optional p)))
 
 (def ^:private param-template
-  " * %s (%s)%s- %s")
+  " * %s (%s)%s - %s")
 
 (defn ^:private clean-param-type
   [param-type]
@@ -53,12 +53,14 @@
           (str/join
            "\n   "
            (for [p params
-                 :let [opt (if-not (req-param? p) " {optional} " "")]]
+                 :let [opt (if-not (req-param? p) " {optional}" "")]]
              (format param-template
                      (csk/->kebab-case-string (or (:name p) "args"))
                      (clean-param-type (:type p))
                      opt
-                     (-> (:description p)
+                     (-> (if-not (empty? (:description p))
+                           (:description p)
+                           "No description")
                          (clean-param-desc)
                          (quote-str))))))))
   ([class-name params]
@@ -74,7 +76,11 @@
                                (csk/->kebab-case-string (or (:name p) "args"))
                                (clean-param-type (:type p))
                                opt
-                               (clean-param-desc (quote-str (:description p))))))))))))
+                               (-> (if-not (empty? (:description p))
+                                     (:description p)
+                                     "No description")
+                                   (clean-param-desc)
+                                   (quote-str)))))))))))
 
 (defn ^:private return-docstring
   [returns]
@@ -102,13 +108,13 @@
             (range 0 (inc (count opt-params))))))
 
 (def ^:private fn-template
-  "(defn %s \n \"%s\" \n %s)")
+  "(defn %s\n  \"%s\"\n %s)")
 
 (def ^:private fn-overload-body-template
-  "([%s] \n (phaser->clj \n (.%s %s \n %s)))")
+  "([%s]\n (phaser->clj\n (.%s %s\n %s)))")
 
 (def ^:private fn-vararg-body-template
-  (str "([%s] \n (phaser->clj \n (.apply (.-%s %s) %s \n"
+  (str "([%s]\n (phaser->clj\n (.apply (.-%s %s) %s\n"
        "(into-array (concat [%s] args)))))"))
 
 (def ^:private fn-arg-template
@@ -170,7 +176,7 @@
     (str/join "\n\n" (filter identity doc-strs))))
 
 (def ^:private constructor-body-template
-  "([%s] \n (js/%s. %s))")
+  "([%s]\n (js/%s. %s))")
 
 (defn ^:private build-constructor-body
   [class-name params]

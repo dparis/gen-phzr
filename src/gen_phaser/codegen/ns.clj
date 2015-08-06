@@ -11,7 +11,7 @@
       (str library-name "." (csk/->kebab-case-string (str/join "." parts))))))
 
 (def ns-template
-  "(ns %s \n (:require [%s.util :refer [clj->phaser phaser->clj]]))")
+  "(ns %s\n (:require [%s.core :refer [clj->phaser phaser->clj]]))")
 
 (defn gen-ns
   [class-name library-name]
