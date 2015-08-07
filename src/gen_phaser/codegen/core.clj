@@ -3,6 +3,7 @@
             [cljfmt.core :as cfmt]
             [clojure.java.io :as io]
             [cuerdas.core :as str]
+            [gen-phaser.codegen.constants :as cc]
             [gen-phaser.codegen.function :as cf]
             [gen-phaser.codegen.ns :as cns]))
 
@@ -13,7 +14,7 @@
         class-col (:classes json-data)]
     (into {} (for [klass class-col] [(:name klass) klass]))))
 
-(defn ^:private public-fn?
+(defn ^:private public-access?
   [f]
   (not (#{"protected" "private"} (:access f))))
 
@@ -22,10 +23,15 @@
   (let [class-name  (:name klass)
         ns-form     (cns/gen-ns class-name "phzr")
         constructor (cf/gen-constructor class-name (:constructor klass))
+        constants   (cc/gen-constants class-name
+                                      (->> (:members klass)
+                                           (filter public-access?)
+                                           (filter #(= "constant" (:kind %)))))
         functions   (map #(cf/gen-function class-name %)
-                         (filter public-fn? (:functions klass)))]
+                         (filter public-access? (:functions klass)))]
     {:ns          ns-form
      :constructor constructor
+     :constants   constants
      :functions   functions}))
 
 (def ^:private export-whitelist
@@ -53,11 +59,16 @@
   [class-name form-data]
   (let [ns-form     (:ns form-data)
         constructor (:constructor form-data)
+        constants   (:constants form-data)
         functions   (:functions form-data)]
     (str ns-form
          "\n\n\n"
          constructor
          "\n\n\n"
+         (if constants
+           (str constants
+                "\n\n\n")
+           "")
          (str/join "\n\n" functions))))
 
 
