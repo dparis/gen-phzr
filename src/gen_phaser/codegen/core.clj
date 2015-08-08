@@ -22,7 +22,8 @@
 (defn ^:private build-form-data
   [klass]
   (let [class-name  (:name klass)
-        ns-form     (cns/gen-ns class-name "phzr")
+        functions   (filter public-access? (:functions klass))
+        ns-form     (cns/gen-ns class-name "phzr" functions)
         constructor (cf/gen-constructor class-name (:constructor klass))
         constants   (cc/gen-constants class-name
                                       (->> (:members klass)
@@ -32,13 +33,12 @@
                                        (->> (:members klass)
                                             (filter public-access?)
                                             (filter #(= "member" (:kind %)))))
-        functions   (map #(cf/gen-function class-name %)
-                         (filter public-access? (:functions klass)))]
+        fn-forms    (map #(cf/gen-function class-name %) functions)]
     {:ns          ns-form
      :constructor constructor
      :constants   constants
      :properties  properties
-     :functions   functions}))
+     :functions   fn-forms}))
 
 (def ^:private export-whitelist
   #{})

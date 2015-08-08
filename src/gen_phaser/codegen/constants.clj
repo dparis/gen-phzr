@@ -29,7 +29,7 @@
   "(def get-%s-constant
   (memoize
    (fn [k]
-     (if-let [cn (get %s-constants k)]
+     (if-let [cn (clojure.core/get %s-constants k)]
        (aget js/%s cn)
        (js/console.log \"Tried to access invalid constant:\" k)))))")
 
