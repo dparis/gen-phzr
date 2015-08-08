@@ -29,9 +29,9 @@
   "(def get-%s-constant
   (memoize
    (fn [k]
-     (if-let [name (get %s-constants k)]
-       (aget js/%s name)
-       (js/console.log \"Tried to access invalid constant:\" name)))))")
+     (if-let [cn (get %s-constants k)]
+       (aget js/%s cn)
+       (js/console.log \"Tried to access invalid constant:\" k)))))")
 
 (defn gen-constants
   [class-name cs]

@@ -5,6 +5,7 @@
             [cuerdas.core :as str]
             [gen-phaser.codegen.constants :as cc]
             [gen-phaser.codegen.function :as cf]
+            [gen-phaser.codegen.properties :as cp]
             [gen-phaser.codegen.ns :as cns]))
 
 
@@ -27,11 +28,16 @@
                                       (->> (:members klass)
                                            (filter public-access?)
                                            (filter #(= "constant" (:kind %)))))
+        properties  (cp/gen-properties class-name
+                                       (->> (:members klass)
+                                            (filter public-access?)
+                                            (filter #(= "member" (:kind %)))))
         functions   (map #(cf/gen-function class-name %)
                          (filter public-access? (:functions klass)))]
     {:ns          ns-form
      :constructor constructor
      :constants   constants
+     :properties  properties
      :functions   functions}))
 
 (def ^:private export-whitelist
@@ -60,6 +66,7 @@
   (let [ns-form     (:ns form-data)
         constructor (:constructor form-data)
         constants   (:constants form-data)
+        properties  (:properties form-data)
         functions   (:functions form-data)]
     (str ns-form
          "\n\n\n"
@@ -67,6 +74,11 @@
          "\n\n\n"
          (if constants
            (str constants
+                "\n\n\n")
+           "")
+         "\n\n\n"
+         (if properties
+           (str properties
                 "\n\n\n")
            "")
          (str/join "\n\n" functions))))
