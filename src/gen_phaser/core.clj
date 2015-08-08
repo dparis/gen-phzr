@@ -5,11 +5,20 @@
             [gen-phaser.codegen.core :as cg])
   (:gen-class))
 
+
+(defn ^:private path-touchup
+  [s]
+  (-> s
+      (str/replace #"web\_gl" "webgl")
+      (str/replace #"p\_2" "p2")))
+
 (defn ^:private build-file-path
   [output-dir class-name]
   (let [parts      (->> (str/split class-name #"\.")
                         (remove #(= "Phaser" %))
-                        (map csk/->snake_case_string))
+                        (map csk/->snake_case_string)
+                        (map str/lower)
+                        (map path-touchup))
         ns-fs-path (str/join "/" parts)]
     (str output-dir "/" ns-fs-path ".cljs")))
 
