@@ -26,11 +26,11 @@
   "(def ^:private %s-constants\n  %s)")
 
 (def ^:private constants-fn-template
-  "(def get-%s-constant
+  "(def get-constant
   (memoize
    (fn [k]
      (if-let [cn (clojure.core/get %s-constants k)]
-       (aget js/%s cn)
+       (phaser->clj (aget js/%s cn))
        (js/console.log \"Tried to access invalid constant:\" k)))))")
 
 (defn gen-constants
@@ -44,6 +44,5 @@
                          (-> (str kw-name-map)
                              (str/replace #"\, " "\n   ")))
                  (format constants-fn-template
-                         instance-arg   ; get-%s-constant
                          instance-arg   ; get %s-constants k
                          class-name)]))))

@@ -33,17 +33,17 @@
   "(def ^:private %s-set-properties\n  %s)")
 
 (def ^:private get-properties-fn-template
-  "(defn get-%s-property
+  "(defn get-property
   [%s-obj k]
     (if-let [pn (clojure.core/get %s-get-properties k)]
-      (aget %s-obj pn)
+      (phaser->clj (aget %s-obj pn))
       (js/console.log \"Tried to access invalid property:\" k)))")
 
 (def ^:private set-properties-fn-template
-  "(defn set-%s-property!
+  "(defn set-property!
   [%s-obj k v]
     (if-let [pn (clojure.core/get %s-set-properties k)]
-      (aset %s-obj pn v)
+      (aset %s-obj pn (clj->phaser v))
       (js/console.log \"Tried to access invalid property:\" k)))")
 
 
