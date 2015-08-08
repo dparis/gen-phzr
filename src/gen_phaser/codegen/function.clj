@@ -46,6 +46,14 @@
   [param-desc]
   (str/replace param-desc crosslink-regex replace-crosslink))
 
+(defn ^:private build-param-name
+  [p]
+  (let [p-name (or (:name p) "args")]
+    (case p-name
+      "args"      "args"
+      "arguments" "args"
+      (csk/->kebab-case-string p-name))))
+
 (defn ^:private param-docstring
   ([params]
    (when-not (empty? params)
@@ -55,7 +63,7 @@
            (for [p params
                  :let [opt (if-not (req-param? p) " {optional}" "")]]
              (format param-template
-                     (csk/->kebab-case-string (or (:name p) "args"))
+                     (build-param-name p)
                      (clean-param-type (:type p))
                      opt
                      (-> (if-not (empty? (:description p))
@@ -73,7 +81,7 @@
                      (for [p params
                            :let [opt (if-not (req-param? p) " {optional} " "")]]
                        (format param-template
-                               (csk/->kebab-case-string (or (:name p) "args"))
+                               (build-param-name p)
                                (clean-param-type (:type p))
                                opt
                                (-> (if-not (empty? (:description p))
@@ -85,7 +93,13 @@
 (defn ^:private return-docstring
   [returns]
   (when returns
-    (str "  Returns:  " (:type returns) " - " (quote-str (:description returns)))))
+    (let [type-str (as-> (:type returns) x
+                     (str/replace x #"\"" "")
+                     (str/trim x)
+                     (str/split x #"\s+")
+                     (str/join " | " x))
+          desc-str (quote-str (:description returns))]
+      (str "  Returns:  " type-str " - " desc-str))))
 
 (defn ^:private build-docstring
   [class-name f]
@@ -124,7 +138,7 @@
   [class-name fn-name params]
   (let [instance-arg (instance-arg-name class-name)
         params       (remove #(not (contains? % :name)) params)
-        param-strs   (map #(csk/->kebab-case-string (:name %)) params)
+        param-strs   (map build-param-name params)
         arg-strs     (map #(format fn-arg-template %) param-strs)]
     (format fn-vararg-body-template
             (str/join " " (concat [instance-arg] param-strs ["& args"]))
@@ -136,7 +150,7 @@
 (defn ^:private build-overload-fn-body
   [class-name fn-name params]
   (let [instance-arg (instance-arg-name class-name)
-        param-strs   (map #(csk/->kebab-case-string (:name %)) params)
+        param-strs   (map build-param-name params)
         arg-strs     (map #(format fn-arg-template %) param-strs)]
     (format fn-overload-body-template
             (str/join " " (concat [instance-arg] param-strs))
@@ -180,7 +194,7 @@
 
 (defn ^:private build-constructor-body
   [class-name params]
-  (let [param-strs (map #(csk/->kebab-case-string (:name %)) params)
+  (let [param-strs (map build-param-name params)
         arg-strs   (map #(format fn-arg-template %) param-strs)]
     (format constructor-body-template
             (str/join " " param-strs)

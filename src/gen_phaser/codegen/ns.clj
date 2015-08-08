@@ -10,12 +10,21 @@
   [s]
   (core-fn-names s))
 
+(defn ^:private ns-touchup
+  [s]
+  (-> s
+      (str/replace #"web\-gl" "webgl")
+      (str/replace #"p\-2" "p2")))
+
 (defn ^:private build-ns-path
   [class-name library-name]
-  (let [parts (str/split class-name #"\.")]
-    (if (= "Phaser" (first parts))
-      (str library-name "." (csk/->kebab-case-string (str/join "." (rest parts))))
-      (str library-name "." (csk/->kebab-case-string (str/join "." parts))))))
+  (let [parts (->> (str/split class-name #"\.")
+                   (map csk/->kebab-case-string)
+                   (map str/lower)
+                   (map ns-touchup))]
+    (if (= "phaser" (first parts))
+      (str library-name "." (str/join "." (rest parts)))
+      (str library-name "." (str/join "." parts)))))
 
 (def ^:private ns-template
   "(ns %s\n (:require [%s.core :refer [clj->phaser phaser->clj]])%s)")
