@@ -34,3 +34,16 @@
 (defn instance-arg-name
   [class-name]
   (name->kebab (last (str/split class-name #"\."))))
+
+(defn distinct-by
+  [coll id-fn]
+  (let [step (fn step [xs seen]
+               (lazy-seq
+                ((fn [[f :as xs] seen]
+                   (when-let [s (seq xs)]
+                     (let [k (id-fn f)]
+                       (if (and k (contains? seen k))
+                         (recur (rest s) seen)
+                         (cons f (step (rest s) (conj seen k)))))))
+                 xs seen)))]
+    (step coll #{})))

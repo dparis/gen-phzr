@@ -7,7 +7,8 @@
             [gen-phaser.codegen.extend :as ce]
             [gen-phaser.codegen.function :as cf]
             [gen-phaser.codegen.properties :as cp]
-            [gen-phaser.codegen.ns :as cns]))
+            [gen-phaser.codegen.ns :as cns]
+            [gen-phaser.util :as u]))
 
 
 (defn ^:private build-data
@@ -15,6 +16,22 @@
   (let [json-data (c/parse-string json true)
         class-col (:classes json-data)]
     (into {} (for [klass class-col] [(:name klass) klass]))))
+
+(defn ^:private fix-bad-doc-in-image-pre-update
+  [data]
+  (let [image-klass         (get data "Phaser.Image")
+        img-functions       (:functions image-klass)
+        fixed-img-functions (u/distinct-by img-functions
+                                           #(= "preUpdate" (:name %)))]
+    (when-not (= (count img-functions) (count fixed-img-functions))
+      (assoc data
+             "Phaser.Image"
+             (assoc image-klass :functions fixed-img-functions)))))
+
+(defn ^:private massage-data
+  [data]
+  (-> data
+      (fix-bad-doc-in-image-pre-update)))
 
 (defn ^:private public-access?
   [f]
@@ -59,8 +76,9 @@
 
 (defn gen-forms
   [json-resource-name]
-  (let [data        (build-data (slurp (io/resource json-resource-name)))
-        export-data (select-keys data (class-keys data))]
+  (let [data          (build-data (slurp (io/resource json-resource-name)))
+        massaged-data (massage-data data)
+        export-data   (select-keys massaged-data (class-keys massaged-data))]
     (into {} (for [[class-name klass] export-data]
                [class-name (build-form-data klass)]))))
 
@@ -88,18 +106,3 @@
          extend-form
          "\n\n\n"
          (str/join "\n\n" functions))))
-
-
-(defn ^:private print-class-summary!
-  [klass]
-  (println "Name: " (:name klass))
-  (println "Functions: ")
-  (doseq [f (sort-by :name (:functions klass))]
-    (println "  * " (:name f) (if (#{"protected" "private"} (:access f))
-                                " + "
-                                "")))
-  (println "Members: ")
-  (doseq [f (sort-by :name (:members klass))]
-    (println "  * " (:name f) (if (#{"protected" "private"} (:access f))
-                                " + "
-                                ""))))
