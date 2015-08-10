@@ -6,13 +6,14 @@
 
 
 (def ^:private core-fn-names
-  (set (map str (keys (ns-publics 'clojure.core)))))
+  (into (set (map str (keys (ns-publics 'clojure.core))))
+        #{"divide" "clone" "uuid"}))
 
 (defn ^:private collides-with-core?
   [s]
   (core-fn-names s))
 
-(defn ^:private build-ns-path
+(defn build-ns-path
   [class-name]
   (let [parts (->> (str/split class-name #"\.")
                    (map u/name->kebab))]
