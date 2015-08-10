@@ -4,6 +4,7 @@
             [clojure.java.io :as io]
             [cuerdas.core :as str]
             [gen-phaser.codegen.constants :as cc]
+            [gen-phaser.codegen.extend :as ce]
             [gen-phaser.codegen.function :as cf]
             [gen-phaser.codegen.properties :as cp]
             [gen-phaser.codegen.ns :as cns]))
@@ -23,7 +24,7 @@
   [klass]
   (let [class-name  (:name klass)
         functions   (filter public-access? (:functions klass))
-        ns-form     (cns/gen-ns class-name "phzr" functions)
+        ns-form     (cns/gen-ns class-name functions)
         constructor (cf/gen-constructor class-name (:constructor klass))
         constants   (cc/gen-constants class-name
                                       (->> (:members klass)
@@ -33,11 +34,13 @@
                                        (->> (:members klass)
                                             (filter public-access?)
                                             (filter #(= "member" (:kind %)))))
+        extend-form (ce/gen-extend class-name)
         fn-forms    (map #(cf/gen-function class-name %) functions)]
     {:ns          ns-form
      :constructor constructor
      :constants   constants
      :properties  properties
+     :extend      extend-form
      :functions   fn-forms}))
 
 (def ^:private export-whitelist
@@ -67,6 +70,7 @@
         constructor (:constructor form-data)
         constants   (:constants form-data)
         properties  (:properties form-data)
+        extend-form (:extend form-data)
         functions   (:functions form-data)]
     (str ns-form
          "\n\n\n"
@@ -81,6 +85,8 @@
            (str properties
                 "\n\n\n")
            "")
+         extend-form
+         "\n\n\n"
          (str/join "\n\n" functions))))
 
 

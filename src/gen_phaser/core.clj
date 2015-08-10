@@ -2,7 +2,8 @@
   (:require [camel-snake-kebab.core :as csk]
             [clojure.java.io :as io]
             [cuerdas.core :as str]
-            [gen-phaser.codegen.core :as cg])
+            [gen-phaser.codegen.core :as cg]
+            [gen-phaser.util :as u])
   (:gen-class))
 
 
@@ -16,9 +17,7 @@
   [output-dir class-name]
   (let [parts      (->> (str/split class-name #"\.")
                         (remove #(= "Phaser" %))
-                        (map csk/->snake_case_string)
-                        (map str/lower)
-                        (map path-touchup))
+                        (map u/name->snake))
         ns-fs-path (str/join "/" parts)]
     (str output-dir "/" ns-fs-path ".cljs")))
 

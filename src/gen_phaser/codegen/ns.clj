@@ -1,7 +1,9 @@
 (ns gen-phaser.codegen.ns
   (:require [camel-snake-kebab.core :as csk]
             [cljfmt.core :as cfmt]
-            [cuerdas.core :as str]))
+            [cuerdas.core :as str]
+            [gen-phaser.util :as u]))
+
 
 (def ^:private core-fn-names
   (set (map str (keys (ns-publics 'clojure.core)))))
@@ -10,24 +12,20 @@
   [s]
   (core-fn-names s))
 
-(defn ^:private ns-touchup
-  [s]
-  (-> s
-      (str/replace #"web\-gl" "webgl")
-      (str/replace #"p\-2" "p2")))
-
 (defn ^:private build-ns-path
-  [class-name library-name]
+  [class-name]
   (let [parts (->> (str/split class-name #"\.")
-                   (map csk/->kebab-case-string)
-                   (map str/lower)
-                   (map ns-touchup))]
+                   (map u/name->kebab))]
     (if (= "phaser" (first parts))
-      (str library-name "." (str/join "." (rest parts)))
-      (str library-name "." (str/join "." parts)))))
+      (str "phzr." (str/join "." (rest parts)))
+      (str "phzr." (str/join "." parts)))))
 
 (def ^:private ns-template
-  "(ns %s\n (:require [%s.core :refer [clj->phaser phaser->clj]])%s)")
+  "(ns %s
+  (:require [phzr.impl.utils.core :refer [clj->phaser phaser->clj]]
+            [phzr.impl.utils.js]
+            [cljsjs.phaser])
+  (:require-macros [phzr.impl.macros.protocols :as pmp])%s)")
 
 (def ^:private excludes-template
   "\n (:refer-clojure :exclude [%s])")
@@ -39,13 +37,12 @@
     ""))
 
 (defn gen-ns
-  [class-name library-name fs]
-  (let [ns-path        (build-ns-path class-name library-name)
-        fn-name-kebabs (map #(csk/->kebab-case-string (:name %)) fs)
+  [class-name fs]
+  (let [ns-path        (build-ns-path class-name)
+        fn-name-kebabs (map #(u/name->kebab (:name %)) fs)
         exclude-names  (filter collides-with-core? fn-name-kebabs)
         excludes-str   (build-excludes exclude-names)]
     (cfmt/reformat-string
      (format ns-template
              ns-path
-             library-name
              excludes-str))))

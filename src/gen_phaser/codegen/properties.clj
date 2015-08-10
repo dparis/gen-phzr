@@ -1,30 +1,17 @@
 (ns gen-phaser.codegen.properties
-  (:require [camel-snake-kebab.core :as csk]
-            [cuerdas.core :as str]))
+  (:require [cuerdas.core :as str]
+            [gen-phaser.util :as u]))
 
 
 (defn ^:private read-only?
   [p]
   (boolean (:readonly p)))
 
-(defn ^:private instance-arg-name
-  [class-name]
-  (csk/->kebab-case-string (last (str/split class-name #"\."))))
-
-(def ^:private name-overrides
-  {})
-
-(defn ^:private name->keyword
-  [s]
-  (if-let [kw (get name-overrides s)]
-    kw
-    (csk/->kebab-case-keyword s)))
-
 (defn ^:private build-keyword-name-map
   [cs]
   (into {} (for [c cs
-                 :let [name (:name c)]]
-             [(name->keyword name) name])))
+                 :let [cn (:name c)]]
+             [(keyword (u/name->kebab cn)) cn])))
 
 (def ^:private get-properties-map-template
   "(def ^:private %s-get-properties\n  %s)")
@@ -51,7 +38,7 @@
   [class-name ps]
   (when-not (empty? ps)
     (let [rw-ps           (remove read-only? ps)
-          instance-arg    (instance-arg-name class-name)
+          instance-arg    (u/instance-arg-name class-name)
           all-kw-name-map (build-keyword-name-map ps)
           rw-kw-name-map  (build-keyword-name-map rw-ps)]
       (str/join "\n\n"

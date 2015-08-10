@@ -1,26 +1,13 @@
 (ns gen-phaser.codegen.constants
-  (:require [camel-snake-kebab.core :as csk]
-            [cuerdas.core :as str]))
+  (:require [cuerdas.core :as str]
+            [gen-phaser.util :as u]))
 
-
-(defn ^:private instance-arg-name
-  [class-name]
-  (csk/->kebab-case-string (last (str/split class-name #"\."))))
-
-(def ^:private name-overrides
-  {})
-
-(defn ^:private name->keyword
-  [s]
-  (if-let [kw (get name-overrides s)]
-    kw
-    (csk/->kebab-case-keyword (str/lower s))))
 
 (defn ^:private build-keyword-name-map
   [cs]
   (into {} (for [c cs
-                 :let [name (:name c)]]
-             [(name->keyword name) name])))
+                 :let [cn (:name c)]]
+             [(keyword (u/name->kebab cn)) cn])))
 
 (def ^:private constants-map-template
   "(def ^:private %s-constants\n  %s)")
@@ -36,7 +23,7 @@
 (defn gen-constants
   [class-name cs]
   (when-not (empty? cs)
-    (let [instance-arg (instance-arg-name class-name)
+    (let [instance-arg (u/instance-arg-name class-name)
           kw-name-map  (build-keyword-name-map cs)]
       (str/join "\n\n"
                 [(format constants-map-template

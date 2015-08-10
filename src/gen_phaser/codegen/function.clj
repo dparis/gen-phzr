@@ -1,12 +1,8 @@
 (ns gen-phaser.codegen.function
-  (:require [camel-snake-kebab.core :as csk]
-            [cljfmt.core :as cfmt]
-            [cuerdas.core :as str]))
+  (:require [cljfmt.core :as cfmt]
+            [cuerdas.core :as str]
+            [gen-phaser.util :as u]))
 
-
-(defn ^:private instance-arg-name
-  [class-name]
-  (csk/->kebab-case-string (last (str/split class-name #"\."))))
 
 (def ^:private class-param-template
   " * %s (%s) - Targeted instance for method")
@@ -52,7 +48,7 @@
     (case p-name
       "args"      "args"
       "arguments" "args"
-      (csk/->kebab-case-string p-name))))
+      (u/name->kebab p-name))))
 
 (defn ^:private param-docstring
   ([params]
@@ -73,7 +69,7 @@
                          (quote-str))))))))
   ([class-name params]
    (when-not (empty? params)
-     (let [instance-arg (instance-arg-name class-name)]
+     (let [instance-arg (u/instance-arg-name class-name)]
        (str "  Parameters:\n   "
             (str/join
              "\n   "
@@ -136,7 +132,7 @@
 
 (defn ^:private build-vararg-fn-body
   [class-name fn-name params]
-  (let [instance-arg (instance-arg-name class-name)
+  (let [instance-arg (u/instance-arg-name class-name)
         params       (remove #(not (contains? % :name)) params)
         param-strs   (map build-param-name params)
         arg-strs     (map #(format fn-arg-template %) param-strs)]
@@ -149,7 +145,7 @@
 
 (defn ^:private build-overload-fn-body
   [class-name fn-name params]
-  (let [instance-arg (instance-arg-name class-name)
+  (let [instance-arg (u/instance-arg-name class-name)
         param-strs   (map build-param-name params)
         arg-strs     (map #(format fn-arg-template %) param-strs)]
     (format fn-overload-body-template
@@ -171,7 +167,7 @@
 (defn gen-function
   [class-name f]
   (let [fn-name       (:name f)
-        fn-name-kebab (csk/->kebab-case-string fn-name)
+        fn-name-kebab (u/name->kebab fn-name)
         docstring     (build-docstring class-name f)
         fn-params     (:parameters f)
         bodies        (build-fn-bodies class-name fn-name fn-params)]
