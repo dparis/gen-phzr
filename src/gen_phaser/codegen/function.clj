@@ -120,60 +120,82 @@
 (def ^:private fn-template
   "(defn %s\n  \"%s\"\n %s)")
 
+(def ^:private fn-vararg-body-template
+  (str "([%s]\n (phaser->clj\n (.apply (aget %s %s) %s\n"
+       "(into-array (concat [%s] args)))))"))
+
+(def ^:private fn-vararg-body-template-static
+  (str "([%s]\n (phaser->clj\n (.apply (aget %s %s)\n"
+       "(into-array (concat [%s] args)))))"))
+
 (def ^:private fn-overload-body-template
   "([%s]\n (phaser->clj\n (.%s %s\n %s)))")
 
-(def ^:private fn-vararg-body-template
-  (str "([%s]\n (phaser->clj\n (.apply (.-%s %s) %s\n"
-       "(into-array (concat [%s] args)))))"))
+(def ^:private fn-overload-body-template-static
+  "([%s]\n (phaser->clj\n (.%s %s\n %s)))")
 
 (def ^:private fn-arg-template
   "(clj->phaser %s)")
 
 (defn ^:private build-vararg-fn-body
-  [class-name fn-name params]
+  [class-name fn-name params static?]
   (let [instance-arg (u/instance-arg-name class-name)
         params       (remove #(not (contains? % :name)) params)
         param-strs   (map build-param-name params)
         arg-strs     (map #(format fn-arg-template %) param-strs)]
-    (format fn-vararg-body-template
-            (str/join " " (concat [instance-arg] param-strs ["& args"]))
-            fn-name
-            instance-arg
-            instance-arg
-            (str/join "\n" arg-strs))))
+    (if-not static?
+      (format fn-vararg-body-template
+              (str/join " " (concat [instance-arg] param-strs ["& args"]))
+              instance-arg
+              fn-name
+              instance-arg
+              (str/join "\n" arg-strs))
+      (format fn-vararg-body-template-static
+              (str/join " " (concat param-strs ["& args"]))
+              (str "js/" class-name)
+              fn-name
+              (str/join "\n" arg-strs)))))
 
 (defn ^:private build-overload-fn-body
-  [class-name fn-name params]
+  [class-name fn-name params static?]
   (let [instance-arg (u/instance-arg-name class-name)
         param-strs   (map build-param-name params)
         arg-strs     (map #(format fn-arg-template %) param-strs)]
-    (format fn-overload-body-template
-            (str/join " " (concat [instance-arg] param-strs))
-            fn-name
-            instance-arg
-            (str/join "\n" arg-strs))))
+    (if-not static?
+      (format fn-overload-body-template
+              (str/join " " (concat [instance-arg] param-strs))
+              fn-name
+              instance-arg
+              (str/join "\n" arg-strs))
+      (format fn-overload-body-template-static
+              (str/join " " param-strs)
+              fn-name
+              (str "js/" class-name)
+              (str/join "\n" arg-strs)))))
 
 (defn ^:private build-fn-bodies
-  [class-name fn-name params]
+  [class-name fn-name params static?]
   (if (params-missing-name? params)
-    (vector (build-vararg-fn-body class-name fn-name params))
+    (vector (build-vararg-fn-body class-name fn-name params static?))
     (let [req-params  (filter req-param? params)
           opt-params  (remove req-param? params)
           param-perms (parameter-permutations req-params opt-params)]
       (for [p param-perms]
-        (build-overload-fn-body class-name fn-name p)))))
+        (build-overload-fn-body class-name fn-name p static?)))))
 
 (defn gen-function
   [class-name f]
   (let [fn-name       (:name f)
+        static?       (:static f)
         fn-name-kebab (u/name->kebab fn-name)
         docstring     (build-docstring class-name f)
         fn-params     (:parameters f)
-        bodies        (build-fn-bodies class-name fn-name fn-params)]
+        bodies        (build-fn-bodies class-name fn-name fn-params static?)]
     (cfmt/reformat-string
      (format fn-template
-             fn-name-kebab
+             (if-not static?
+               fn-name-kebab
+               (str fn-name-kebab "-"))
              docstring
              (str/join "\n" bodies)))))
 
