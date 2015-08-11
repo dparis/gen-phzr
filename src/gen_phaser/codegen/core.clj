@@ -41,11 +41,25 @@
              (assoc gamepad-klass :functions fixed-gp-functions))
       data)))
 
+(defn ^:private fix-bad-doc-in-tween-repeat-all
+  [data]
+  (let [tween-klass        (get data "Phaser.Tween")
+        tween-functions    (:functions tween-klass)
+        fixed-tw-functions (map #(if (and (= "repeat" (:name %))
+                                          (= 1 (count (:parameters %))))
+                                   (assoc % :name "repeatAll")
+                                   %)
+                                tween-functions)]
+    (assoc data
+           "Phaser.Tween"
+           (assoc tween-klass :functions fixed-tw-functions))))
+
 (defn ^:private massage-data
   [data]
   (-> data
       (fix-bad-doc-in-image-pre-update)
-      (remove-duplicate-just-pressed-from-gamepad)))
+      (remove-duplicate-just-pressed-from-gamepad)
+      (fix-bad-doc-in-tween-repeat-all)))
 
 (defn ^:private public-access?
   [f]
