@@ -23,15 +23,29 @@
         img-functions       (:functions image-klass)
         fixed-img-functions (u/distinct-by img-functions
                                            #(= "preUpdate" (:name %)))]
-    (when-not (= (count img-functions) (count fixed-img-functions))
+    (if-not (= (count img-functions) (count fixed-img-functions))
       (assoc data
              "Phaser.Image"
-             (assoc image-klass :functions fixed-img-functions)))))
+             (assoc image-klass :functions fixed-img-functions))
+      data)))
+
+(defn ^:private remove-duplicate-just-pressed-from-gamepad
+  [data]
+  (let [gamepad-klass      (get data "Phaser.Gamepad")
+        gp-functions       (:functions gamepad-klass)
+        fixed-gp-functions (u/distinct-by gp-functions
+                                          #(= "justPressed" (:name %)))]
+    (if-not (= (count gp-functions) (count fixed-gp-functions))
+      (assoc data
+             "Phaser.Gamepad"
+             (assoc gamepad-klass :functions fixed-gp-functions))
+      data)))
 
 (defn ^:private massage-data
   [data]
   (-> data
-      (fix-bad-doc-in-image-pre-update)))
+      (fix-bad-doc-in-image-pre-update)
+      (remove-duplicate-just-pressed-from-gamepad)))
 
 (defn ^:private public-access?
   [f]
