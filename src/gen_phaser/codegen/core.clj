@@ -54,12 +54,26 @@
            "Phaser.Tween"
            (assoc tween-klass :functions fixed-tw-functions))))
 
+(defn ^:private fix-bad-doc-in-debug-geom
+  [data]
+  (let [debug-klass         (get data "Phaser.Utils.Debug")
+        debug-functions     (:functions debug-klass)
+        fixed-dbg-functions (map #(if (and (= "geom" (:name %))
+                                           (= 3 (count (:parameters %))))
+                                    (assoc % :name "rectangle")
+                                    %)
+                                 debug-functions)]
+    (assoc data
+           "Phaser.Utils.Debug"
+           (assoc debug-klass :functions fixed-dbg-functions))))
+
 (defn ^:private massage-data
   [data]
   (-> data
       (fix-bad-doc-in-image-pre-update)
       (remove-duplicate-just-pressed-from-gamepad)
-      (fix-bad-doc-in-tween-repeat-all)))
+      (fix-bad-doc-in-tween-repeat-all)
+      (fix-bad-doc-in-debug-geom)))
 
 (defn ^:private public-access?
   [f]
