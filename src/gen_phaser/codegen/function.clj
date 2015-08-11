@@ -32,7 +32,9 @@
 
 (defn ^:private quote-str
   [s]
-  (str/replace s #"\"" (clojure.string/re-quote-replacement "\\\"")))
+  (-> s
+      (str/replace #"\"" "'")
+      (str/replace #"\\" (clojure.string/re-quote-replacement "\\\\"))))
 
 (defn ^:private indent-desc
   [s]
