@@ -41,7 +41,7 @@
   [class-name fs]
   (let [ns-path        (build-ns-path class-name)
         fn-name-kebabs (map #(u/name->kebab (:name %)) fs)
-        exclude-names  (filter collides-with-core? fn-name-kebabs)
+        exclude-names  (distinct (filter collides-with-core? fn-name-kebabs))
         excludes-str   (build-excludes exclude-names)]
     (cfmt/reformat-string
      (format ns-template
