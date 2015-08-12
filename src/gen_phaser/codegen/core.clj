@@ -67,13 +67,78 @@
            "Phaser.Utils.Debug"
            (assoc debug-klass :functions fixed-dbg-functions))))
 
+(defn ^:private fix-bad-create-body-in-p2
+  [data]
+  (let [p2-klass     (get data "Phaser.Physics.P2")
+        p2-functions (:functions p2-klass)
+        cb-fn        (first (filter #(= "createBody" (:name %)) p2-functions))
+        fixed-params (->> (:parameters cb-fn)
+                          (remove #(re-find #"options\." (:name %)))
+                          (map #(if (#{"options" "points"} (:name %))
+                                  (assoc % :optional true)
+                                  %)))
+        fixed-cb-fn  (assoc cb-fn :parameters fixed-params)
+        fixed-p2-fns (map #(if (= "createBody" (:name %))
+                             fixed-cb-fn
+                             %)
+                          p2-functions)]
+    (assoc data
+           "Phaser.Physics.P2"
+           (assoc p2-klass
+                  :functions fixed-p2-fns))))
+
+(defn ^:private fix-bad-create-particle-in-p2
+  [data]
+  (let [p2-klass     (get data "Phaser.Physics.P2")
+        p2-functions (:functions p2-klass)
+        cp-fn        (first (filter #(= "createParticle" (:name %))
+                                    p2-functions))
+        fixed-params (->> (:parameters cp-fn)
+                          (remove #(re-find #"options\." (:name %)))
+                          (map #(if (#{"options" "points"} (:name %))
+                                  (assoc % :optional true)
+                                  %)))
+        fixed-cp-fn  (assoc cp-fn :parameters fixed-params)
+        fixed-p2-fns (map #(if (= "createParticle" (:name %))
+                             fixed-cp-fn
+                             %)
+                          p2-functions)]
+    (assoc data
+           "Phaser.Physics.P2"
+           (assoc p2-klass
+                  :functions fixed-p2-fns))))
+
+(defn ^:private fix-bad-add-polygon-in-p2-body
+  [data]
+  (let [p2b-klass     (get data "Phaser.Physics.P2.Body")
+        p2b-functions (:functions p2b-klass)
+        ap-fn         (first (filter #(= "addPolygon" (:name %))
+                                     p2b-functions))
+        fixed-params  (->> (:parameters ap-fn)
+                           (remove #(re-find #"options\." (:name %)))
+                           (map #(if (#{"options" "points"} (:name %))
+                                   (assoc % :optional true)
+                                   %)))
+        fixed-ap-fn   (assoc ap-fn :parameters fixed-params)
+        fixed-p2b-fns (map #(if (= "addPolygon" (:name %))
+                              fixed-ap-fn
+                              %)
+                           p2b-functions)]
+    (assoc data
+           "Phaser.Physics.P2.Body"
+           (assoc p2b-klass
+                  :functions fixed-p2b-fns))))
+
 (defn ^:private massage-data
   [data]
   (-> data
       (fix-bad-doc-in-image-pre-update)
       (remove-duplicate-just-pressed-from-gamepad)
       (fix-bad-doc-in-tween-repeat-all)
-      (fix-bad-doc-in-debug-geom)))
+      (fix-bad-doc-in-debug-geom)
+      (fix-bad-create-body-in-p2)
+      (fix-bad-create-particle-in-p2)
+      (fix-bad-add-polygon-in-p2-body)))
 
 (defn ^:private public-access?
   [f]
