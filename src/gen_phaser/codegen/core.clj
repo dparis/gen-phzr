@@ -167,25 +167,12 @@
      :extend      extend-form
      :functions   fn-forms}))
 
-(def ^:private export-whitelist
-  #{})
-
-(defn ^:private export-class-name?
-  [s]
-  (or (re-find #"Phaser\." s)
-      (re-find #"PIXI\." s)
-      (export-whitelist s)))
-
-(defn ^:private class-keys
-  [data]
-  (->> (keys data)
-       (filter export-class-name?)))
-
 (defn gen-forms
   [json-resource-name]
   (let [data          (build-data (slurp (io/resource json-resource-name)))
         massaged-data (massage-data data)
-        export-data   (select-keys massaged-data (class-keys massaged-data))]
+        class-names   (u/export-class-names massaged-data)
+        export-data   (select-keys massaged-data class-names)]
     (into {} (for [[class-name klass] export-data]
                [class-name (build-form-data klass)]))))
 

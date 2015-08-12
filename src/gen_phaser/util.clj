@@ -47,3 +47,33 @@
                          (cons f (step (rest s) (conj seen k)))))))
                  xs seen)))]
     (step coll #{})))
+
+(def ^:private export-whitelist
+  #{})
+
+(def ^:private export-blacklist
+  #{"Phaser.Physics.Ninja"
+    "Phaser.Physics.Ninja.AABB"
+    "Phaser.Physics.Ninja.Body"
+    "Phaser.Physics.Ninja.Circle"
+    "Phaser.Physics.Ninja.Tile"
+    "Phaser.Physics.Box2D"
+    "Phaser.Plugin.AStar"
+    "Phaser.Plugin.AStar.AStarNode"
+    "Phaser.Plugin.AStar.AStarPath"
+    "Phaser.Plugin.Juicy"
+    "Phaser.Plugin.Juicy.ScreenFlash"
+    "Phaser.Plugin.Juicy.Trail"
+    "Phaser.Plugin.TilemapWalker"})
+
+(defn ^:private export-class-name?
+  [s]
+  (and (or (re-find #"Phaser\." s)
+           (re-find #"PIXI\." s)
+           (export-whitelist s))
+       (not (export-blacklist s))))
+
+(defn export-class-names
+  [data]
+  (->> (keys data)
+       (filter export-class-name?)))

@@ -33,7 +33,7 @@
 
 (defn ^:private build-test-file
   [forms]
-  (let [class-names (keys forms)
+  (let [class-names (u/export-class-names forms)
         ns-paths    (sort (map cns/build-ns-path class-names))]
     (cfmt/reformat-string
      (format "(ns phzr.impl.test-all\n  (:require %s))"
