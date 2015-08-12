@@ -158,7 +158,7 @@
                                        (->> (:members klass)
                                             (filter public-access?)
                                             (filter #(= "member" (:kind %)))))
-        extend-form (ce/gen-extend class-name)
+        extend-form (ce/gen-extend class-name constants properties)
         fn-forms    (map #(cf/gen-function class-name %) functions)]
     {:ns          ns-form
      :constructor constructor

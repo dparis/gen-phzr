@@ -24,9 +24,8 @@
 (def ^:private ns-template
   "(ns %s
   (:require [phzr.impl.utils.core :refer [clj->phaser phaser->clj]]
-            [phzr.impl.utils.js]
-            [cljsjs.phaser])
-  (:require-macros [phzr.impl.macros.protocols :as pmp])%s)")
+            [phzr.impl.extension :as ex]
+            [cljsjs.phaser])%s)")
 
 (def ^:private excludes-template
   "\n (:refer-clojure :exclude [%s])")

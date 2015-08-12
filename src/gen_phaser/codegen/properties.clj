@@ -1,5 +1,6 @@
 (ns gen-phaser.codegen.properties
-  (:require [cuerdas.core :as str]
+  (:require [cljfmt.core :as cfmt]
+            [cuerdas.core :as str]
             [gen-phaser.util :as u]))
 
 
@@ -19,21 +20,6 @@
 (def ^:private set-properties-map-template
   "(def ^:private %s-set-properties\n  %s)")
 
-(def ^:private get-properties-fn-template
-  "(defn get-property
-  [%s-obj k]
-    (if-let [pn (clojure.core/get %s-get-properties k)]
-      (phaser->clj (aget %s-obj pn))
-      (js/console.log \"Tried to access invalid property:\" k)))")
-
-(def ^:private set-properties-fn-template
-  "(defn set-property!
-  [%s-obj k v]
-    (if-let [pn (clojure.core/get %s-set-properties k)]
-      (aset %s-obj pn (clj->phaser v))
-      (js/console.log \"Tried to access invalid property:\" k)))")
-
-
 (defn gen-properties
   [class-name ps]
   (when-not (empty? ps)
@@ -41,22 +27,13 @@
           instance-arg    (u/instance-arg-name class-name)
           all-kw-name-map (build-keyword-name-map ps)
           rw-kw-name-map  (build-keyword-name-map rw-ps)]
-      (str/join "\n\n"
-                [(format get-properties-map-template
-                         instance-arg
-                         (-> (str all-kw-name-map)
-                             (str/replace #"\, " "\n   ")))
-                 (format set-properties-map-template
-                         instance-arg
-                         (-> (str rw-kw-name-map)
-                             (str/replace #"\, " "\n   ")))
-                 (format get-properties-fn-template
-                         instance-arg   ; get-%s-property
-                         instance-arg   ; first arg
-                         instance-arg   ; get %s-get-properties k
-                         instance-arg)  ; aget %s name
-                 (format set-properties-fn-template
-                         instance-arg   ; get-%s-property
-                         instance-arg   ; first arg
-                         instance-arg   ; get %s-set-properties k
-                         instance-arg)])))) ; aset %s name
+      (cfmt/reformat-string
+       (str/join "\n\n"
+                 [(format get-properties-map-template
+                          instance-arg
+                          (-> (str all-kw-name-map)
+                              (str/replace #"\, " "\n   ")))
+                  (format set-properties-map-template
+                          instance-arg
+                          (-> (str rw-kw-name-map)
+                              (str/replace #"\, " "\n   ")))])))))
