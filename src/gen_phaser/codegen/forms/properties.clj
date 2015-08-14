@@ -1,4 +1,4 @@
-(ns gen-phaser.codegen.properties
+(ns gen-phaser.codegen.forms.properties
   (:require [cljfmt.core :as cfmt]
             [cuerdas.core :as str]
             [gen-phaser.util :as u]))
@@ -15,10 +15,10 @@
              [(keyword (u/name->kebab cn)) cn])))
 
 (def ^:private get-properties-map-template
-  "(def ^:private %s-get-properties\n  %s)")
+  "(def %s-get-properties\n  %s)")
 
 (def ^:private set-properties-map-template
-  "(def ^:private %s-set-properties\n  %s)")
+  "(def %s-set-properties\n  %s)")
 
 (defn gen-properties
   [class-name ps]

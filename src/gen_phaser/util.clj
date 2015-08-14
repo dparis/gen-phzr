@@ -52,7 +52,9 @@
   #{})
 
 (def ^:private export-blacklist
-  #{"Phaser.Physics.Ninja"
+  #{"Phaser.Creature"
+    "Phaser.Particles.Arcade"
+    "Phaser.Physics.Ninja"
     "Phaser.Physics.Ninja.AABB"
     "Phaser.Physics.Ninja.Body"
     "Phaser.Physics.Ninja.Circle"
@@ -64,12 +66,14 @@
     "Phaser.Plugin.Juicy"
     "Phaser.Plugin.Juicy.ScreenFlash"
     "Phaser.Plugin.Juicy.Trail"
-    "Phaser.Plugin.TilemapWalker"})
+    "Phaser.Plugin.TilemapWalker"
+    "PIXI.Event"
+    "PIXI.EventTarget"})
 
 (defn ^:private export-class-name?
   [s]
-  (and (or (re-find #"Phaser\." s)
-           (re-find #"PIXI\." s)
+  (and (or (re-find #"^Phaser" s)
+           (re-find #"^PIXI" s)
            (export-whitelist s))
        (not (export-blacklist s))))
 
@@ -77,3 +81,52 @@
   [data]
   (->> (keys data)
        (filter export-class-name?)))
+
+(defn ^:private path-touchup
+  [s]
+  (-> s
+      (str/replace #"web\_gl" "webgl")
+      (str/replace #"p\_2" "p2")))
+
+(defn build-file-path
+  [output-dir class-name]
+  (let [parts      (->> (str/split class-name #"\.")
+                        (remove #(= "Phaser" %))
+                        (map name->snake))
+        ns-fs-path (str/join "/" parts)]
+    (str output-dir "/" ns-fs-path ".cljs")))
+
+(defn build-ns-path
+  ([class-name] (build-ns-path class-name "phzr."))
+  ([class-name root]
+   (let [parts (->> (str/split class-name #"\.")
+                    (map name->kebab))]
+     (if (= "phaser" (first parts))
+       (str root (str/join "." (rest parts)))
+       (str root (str/join "." parts))))))
+
+(def raw-phaser-objs
+  #{"PIXI"
+    "PIXI.PolyK"
+    "Phaser.AnimationParser"
+    "Phaser.ArrayUtils"
+    "Phaser.Canvas"
+    "Phaser.Color"
+    "Phaser.DOM"
+    "Phaser.Device"
+    "Phaser.Easing"
+    "Phaser.Easing.Back"
+    "Phaser.Easing.Bounce"
+    "Phaser.Easing.Circular"
+    "Phaser.Easing.Cubic"
+    "Phaser.Easing.Elastic"
+    "Phaser.Easing.Exponential"
+    "Phaser.Easing.Linear"
+    "Phaser.Easing.Quadratic"
+    "Phaser.Easing.Quartic"
+    "Phaser.Easing.Quintic"
+    "Phaser.Easing.Sinusoidal"
+    "Phaser.LoaderParser"
+    "Phaser.Math"
+    "Phaser.TilemapParser"
+    "Phaser.Utils"})

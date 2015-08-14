@@ -1,4 +1,4 @@
-(ns gen-phaser.codegen.constants
+(ns gen-phaser.codegen.forms.constants
   (:require [cljfmt.core :as cfmt]
             [cuerdas.core :as str]
             [gen-phaser.util :as u]))

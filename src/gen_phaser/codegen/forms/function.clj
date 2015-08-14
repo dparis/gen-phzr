@@ -1,4 +1,4 @@
-(ns gen-phaser.codegen.function
+(ns gen-phaser.codegen.forms.function
   (:require [cljfmt.core :as cfmt]
             [cuerdas.core :as str]
             [gen-phaser.util :as u]))
@@ -223,15 +223,16 @@
 
 (defn gen-constructor
   [class-name c]
-  (let [fn-name     (str "->" (:name c))
-        docstring   (build-constructor-docstring c)
-        fn-params   (:parameters c)
-        req-params  (filter req-param? fn-params)
-        opt-params  (remove req-param? fn-params)
-        param-perms (parameter-permutations req-params opt-params)
-        bodies      (map #(build-constructor-body class-name %) param-perms)]
-    (cfmt/reformat-string
-     (format fn-template
-             fn-name
-             docstring
-             (str/join "\n" bodies)))))
+  (when-not (u/raw-phaser-objs class-name)
+    (let [fn-name     (str "->" (:name c))
+          docstring   (build-constructor-docstring c)
+          fn-params   (:parameters c)
+          req-params  (filter req-param? fn-params)
+          opt-params  (remove req-param? fn-params)
+          param-perms (parameter-permutations req-params opt-params)
+          bodies      (map #(build-constructor-body class-name %) param-perms)]
+      (cfmt/reformat-string
+       (format fn-template
+               fn-name
+               docstring
+               (str/join "\n" bodies))))))

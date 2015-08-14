@@ -3,11 +3,10 @@
             [cljfmt.core :as cfmt]
             [clojure.java.io :as io]
             [cuerdas.core :as str]
-            [gen-phaser.codegen.constants :as cc]
-            [gen-phaser.codegen.extend :as ce]
-            [gen-phaser.codegen.function :as cf]
-            [gen-phaser.codegen.properties :as cp]
-            [gen-phaser.codegen.ns :as cns]
+            [gen-phaser.codegen.files.accessor-file :as faf]
+            [gen-phaser.codegen.files.src-file :as fsf]
+            [gen-phaser.codegen.files.extend-all-file :as feaf]
+            [gen-phaser.codegen.files.test-all-file :as ftaf]
             [gen-phaser.util :as u]))
 
 
@@ -129,6 +128,22 @@
            (assoc p2b-klass
                   :functions fixed-p2b-fns))))
 
+(defn ^:private fix-pixi-class-name
+  [data]
+  (let [pixi-klass (get data "PIXI.PIXI")]
+    (-> data
+        (dissoc "PIXI.PIXI")
+        (assoc "PIXI" (assoc pixi-klass :name "PIXI")))))
+
+(defn ^:private make-class-static
+  [data class-name]
+  (let [klass     (get data class-name)
+        functions (:functions klass)
+        fixed-fns (map #(assoc % :static true) functions)]
+    (assoc data
+           class-name
+           (assoc klass :functions fixed-fns))))
+
 (defn ^:private massage-data
   [data]
   (-> data
@@ -138,65 +153,48 @@
       (fix-bad-doc-in-debug-geom)
       (fix-bad-create-body-in-p2)
       (fix-bad-create-particle-in-p2)
-      (fix-bad-add-polygon-in-p2-body)))
+      (fix-bad-add-polygon-in-p2-body)
+      (fix-pixi-class-name)
+      (make-class-static "Phaser.Math")
+      (make-class-static "Phaser.Utils")))
 
 (defn ^:private public-access?
   [f]
   (not (#{"protected" "private"} (:access f))))
 
-(defn ^:private build-form-data
-  [klass]
-  (let [class-name  (:name klass)
-        functions   (filter public-access? (:functions klass))
-        ns-form     (cns/gen-ns class-name functions)
-        constructor (cf/gen-constructor class-name (:constructor klass))
-        constants   (cc/gen-constants class-name
-                                      (->> (:members klass)
-                                           (filter public-access?)
-                                           (filter #(= "constant" (:kind %)))))
-        properties  (cp/gen-properties class-name
-                                       (->> (:members klass)
-                                            (filter public-access?)
-                                            (filter #(= "member" (:kind %)))))
-        extend-form (ce/gen-extend class-name constants properties)
-        fn-forms    (map #(cf/gen-function class-name %) functions)]
-    {:ns          ns-form
-     :constructor constructor
-     :constants   constants
-     :properties  properties
-     :extend      extend-form
-     :functions   fn-forms}))
+(defn ^:private build-export-data
+  [data]
+  (into {} (for [[class-name klass] data]
+             (let [class-name  (:name klass)
+                   functions   (filter public-access? (:functions klass))
+                   constructor (:constructor klass)
+                   constants   (->> (:members klass)
+                                    (filter public-access?)
+                                    (filter #(= "constant" (:kind %))))
+                   properties  (->> (:members klass)
+                                    (filter public-access?)
+                                    (filter #(= "member" (:kind %))))]
+               [class-name
+                {:name        class-name
+                 :constructor constructor
+                 :constants   constants
+                 :properties  properties
+                 :functions   functions}]))))
 
-(defn gen-forms
+(defn gen-files
   [json-resource-name]
   (let [data          (build-data (slurp (io/resource json-resource-name)))
         massaged-data (massage-data data)
         class-names   (u/export-class-names massaged-data)
-        export-data   (select-keys massaged-data class-names)]
-    (into {} (for [[class-name klass] export-data]
-               [class-name (build-form-data klass)]))))
-
-(defn build-file-text
-  [class-name form-data]
-  (let [ns-form     (:ns form-data)
-        constructor (:constructor form-data)
-        constants   (:constants form-data)
-        properties  (:properties form-data)
-        extend-form (:extend form-data)
-        functions   (:functions form-data)]
-    (str ns-form
-         "\n\n\n"
-         constructor
-         "\n\n\n"
-         (if constants
-           (str constants
-                "\n\n\n")
-           "")
-         "\n\n\n"
-         (if properties
-           (str properties
-                "\n\n\n")
-           "")
-         extend-form
-         "\n\n\n"
-         (str/join "\n\n" functions))))
+        export-data   (build-export-data
+                       (select-keys massaged-data class-names))]
+    (remove nil?
+            (conj
+             (concat (pmap (fn [[class-name class-data]]
+                             (fsf/build-src-file class-name class-data))
+                           export-data)
+                     (pmap (fn [[class-name class-data]]
+                             (faf/build-accessor-file class-name class-data))
+                           export-data))
+             (ftaf/build-test-file export-data)
+             (feaf/build-extend-all-file export-data)))))
