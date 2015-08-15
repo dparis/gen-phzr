@@ -45,7 +45,8 @@
         constructor-str (ff/gen-constructor class-name constructor)
         functions       (:functions class-data)
         ns-str          (build-ns class-name functions)
-        function-strs   (map #(ff/gen-function class-name %) functions)]
+        function-strs   (map #(ff/gen-function class-name %)
+                             (sort-by #(u/name->kebab (:name %)) functions))]
 
     {:path file-path
      :text (cfmt/reformat-string

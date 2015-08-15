@@ -9,7 +9,7 @@
 
 (defn ^:private req-param?
   [p]
-  (#{false ""} (:optional p)))
+  (contains? #{false "" nil} (:optional p)))
 
 (def ^:private param-template
   " * %s (%s)%s - %s")
@@ -38,7 +38,9 @@
 
 (defn ^:private indent-desc
   [s]
-  (str/replace s #"\n" "\n  "))
+  (-> s
+      (str/replace #"\n" "\n  ")
+      (str/replace #"\n  \n" "\n\n")))
 
 (defn ^:private clean-param-desc
   [param-desc]
@@ -52,41 +54,33 @@
       "arguments" "args"
       (u/name->kebab p-name))))
 
+(defn ^:private build-param-strings
+  [params]
+  (for [p params
+        :let [opt (if-not (req-param? p) " {optional}" "")]]
+    (format param-template
+            (build-param-name p)
+            (clean-param-type (:type p))
+            opt
+            (-> (if-not (empty? (:description p))
+                  (:description p)
+                  "No description")
+                (clean-param-desc)
+                (quote-str)))))
+
 (defn ^:private param-docstring
   ([params]
    (when-not (empty? params)
      (str "  Parameters:\n   "
-          (str/join
-           "\n   "
-           (for [p params
-                 :let [opt (if-not (req-param? p) " {optional}" "")]]
-             (format param-template
-                     (build-param-name p)
-                     (clean-param-type (:type p))
-                     opt
-                     (-> (if-not (empty? (:description p))
-                           (:description p)
-                           "No description")
-                         (clean-param-desc)
-                         (quote-str))))))))
+          (str/join  "\n   " (build-param-strings params)))))
   ([class-name params]
    (when-not (empty? params)
      (let [instance-arg (u/instance-arg-name class-name)]
        (str "  Parameters:\n   "
-            (str/join
-             "\n   "
-             (concat [(format class-param-template instance-arg class-name)]
-                     (for [p params
-                           :let [opt (if-not (req-param? p) " {optional} " "")]]
-                       (format param-template
-                               (build-param-name p)
-                               (clean-param-type (:type p))
-                               opt
-                               (-> (if-not (empty? (:description p))
-                                     (:description p)
-                                     "No description")
-                                   (clean-param-desc)
-                                   (quote-str)))))))))))
+            (str/join "\n   " (concat [(format class-param-template
+                                               instance-arg
+                                               class-name)]
+                                      (build-param-strings params))))))))
 
 (defn ^:private return-docstring
   [returns]
@@ -102,10 +96,13 @@
 (defn ^:private build-docstring
   [class-name f]
   (let [desc     (indent-desc (quote-str (:description f)))
+        static?  (:static f)
         params   (:parameters f)
         returns  (:returns f)
         doc-strs [desc
-                  (param-docstring class-name params)
+                  (if static?
+                    (param-docstring params)
+                    (param-docstring class-name params))
                   (return-docstring returns)]]
     (str/join "\n\n" (filter identity doc-strs))))
 

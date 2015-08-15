@@ -10,9 +10,10 @@
 
 (defn ^:private build-keyword-name-map
   [cs]
-  (into {} (for [c cs
-                 :let [cn (:name c)]]
-             [(keyword (u/name->kebab cn)) cn])))
+  (into (sorted-map)
+        (for [c cs
+              :let [cn (:name c)]]
+          [(keyword (u/name->kebab cn)) cn])))
 
 (def ^:private get-properties-map-template
   "(def %s-get-properties\n  %s)")

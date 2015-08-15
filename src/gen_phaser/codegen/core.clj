@@ -128,6 +128,26 @@
            (assoc p2b-klass
                   :functions fixed-p2b-fns))))
 
+(defn ^:private fix-bad-play-in-audio-sprite
+  [data]
+  (let [as-klass     (get data "Phaser.AudioSprite")
+        as-functions (:functions as-klass)
+        p-fn         (first (filter #(= "play" (:name %))
+                                    as-functions))
+        fixed-params (->> (:parameters p-fn)
+                          (map #(if (= "marker" (:name %))
+                                  (assoc % :optional false)
+                                  %)))
+        fixed-p-fn   (assoc p-fn :parameters fixed-params)
+        fixed-as-fns (map #(if (= "play" (:name %))
+                             fixed-p-fn
+                             %)
+                          as-functions)]
+    (assoc data
+           "Phaser.AudioSprite"
+           (assoc as-klass
+                  :functions fixed-as-fns))))
+
 (defn ^:private fix-pixi-class-name
   [data]
   (let [pixi-klass (get data "PIXI.PIXI")]
@@ -154,9 +174,11 @@
       (fix-bad-create-body-in-p2)
       (fix-bad-create-particle-in-p2)
       (fix-bad-add-polygon-in-p2-body)
+      (fix-bad-play-in-audio-sprite)
       (fix-pixi-class-name)
       (make-class-static "Phaser.Math")
-      (make-class-static "Phaser.Utils")))
+      (make-class-static "Phaser.Utils")
+      (make-class-static "Phaser.ArrayUtils")))
 
 (defn ^:private public-access?
   [f]
