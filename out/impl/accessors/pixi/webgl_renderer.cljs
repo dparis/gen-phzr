@@ -1,0 +1,41 @@
+(ns phzr.impl.accessors.pixi.webgl-renderer)
+
+(def webgl-renderer-get-properties
+  {:auto-resize "autoResize"
+   :blend-mode-manager "blendModeManager"
+   :clear-before-render "clearBeforeRender"
+   :filter-manager "filterManager"
+   :height "height"
+   :mask-manager "maskManager"
+   :offset "offset"
+   :preserve-drawing-buffer "preserveDrawingBuffer"
+   :projection "projection"
+   :render-session "renderSession"
+   :resolution "resolution"
+   :shader-manager "shaderManager"
+   :sprite-batch "spriteBatch"
+   :stencil-manager "stencilManager"
+   :transparent "transparent"
+   :type "type"
+   :view "view"
+   :width "width"})
+
+(def webgl-renderer-set-properties
+  {:auto-resize "autoResize"
+   :blend-mode-manager "blendModeManager"
+   :clear-before-render "clearBeforeRender"
+   :filter-manager "filterManager"
+   :height "height"
+   :mask-manager "maskManager"
+   :offset "offset"
+   :preserve-drawing-buffer "preserveDrawingBuffer"
+   :projection "projection"
+   :render-session "renderSession"
+   :resolution "resolution"
+   :shader-manager "shaderManager"
+   :sprite-batch "spriteBatch"
+   :stencil-manager "stencilManager"
+   :transparent "transparent"
+   :type "type"
+   :view "view"
+   :width "width"})

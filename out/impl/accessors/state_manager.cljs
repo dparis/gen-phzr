@@ -1,0 +1,40 @@
+(ns phzr.impl.accessors.state-manager)
+
+(def state-manager-get-properties
+  {:created "created"
+   :current "current"
+   :game "game"
+   :on-create-callback "onCreateCallback"
+   :on-init-callback "onInitCallback"
+   :on-load-render-callback "onLoadRenderCallback"
+   :on-load-update-callback "onLoadUpdateCallback"
+   :on-pause-update-callback "onPauseUpdateCallback"
+   :on-paused-callback "onPausedCallback"
+   :on-pre-render-callback "onPreRenderCallback"
+   :on-preload-callback "onPreloadCallback"
+   :on-render-callback "onRenderCallback"
+   :on-resize-callback "onResizeCallback"
+   :on-resumed-callback "onResumedCallback"
+   :on-shut-down-callback "onShutDownCallback"
+   :on-state-change "onStateChange"
+   :on-update-callback "onUpdateCallback"
+   :states "states"})
+
+(def state-manager-set-properties
+  {:current "current"
+   :game "game"
+   :on-create-callback "onCreateCallback"
+   :on-init-callback "onInitCallback"
+   :on-load-render-callback "onLoadRenderCallback"
+   :on-load-update-callback "onLoadUpdateCallback"
+   :on-pause-update-callback "onPauseUpdateCallback"
+   :on-paused-callback "onPausedCallback"
+   :on-pre-render-callback "onPreRenderCallback"
+   :on-preload-callback "onPreloadCallback"
+   :on-render-callback "onRenderCallback"
+   :on-resize-callback "onResizeCallback"
+   :on-resumed-callback "onResumedCallback"
+   :on-shut-down-callback "onShutDownCallback"
+   :on-state-change "onStateChange"
+   :on-update-callback "onUpdateCallback"
+   :states "states"})

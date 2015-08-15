@@ -1,0 +1,37 @@
+(ns phzr.impl.accessors.bitmap-data)
+
+(def bitmap-data-get-properties
+  {:base-texture "baseTexture"
+   :canvas "canvas"
+   :context "context"
+   :ctx "ctx"
+   :data "data"
+   :dirty "dirty"
+   :disable-texture-upload "disableTextureUpload"
+   :game "game"
+   :height "height"
+   :image-data "imageData"
+   :key "key"
+   :pixels "pixels"
+   :texture "texture"
+   :texture-frame "textureFrame"
+   :type "type"
+   :width "width"})
+
+(def bitmap-data-set-properties
+  {:base-texture "baseTexture"
+   :canvas "canvas"
+   :context "context"
+   :ctx "ctx"
+   :data "data"
+   :dirty "dirty"
+   :disable-texture-upload "disableTextureUpload"
+   :game "game"
+   :height "height"
+   :image-data "imageData"
+   :key "key"
+   :pixels "pixels"
+   :texture "texture"
+   :texture-frame "textureFrame"
+   :type "type"
+   :width "width"})

@@ -1,0 +1,36 @@
+(ns phzr.impl.accessors.key)
+
+(def key-get-properties
+  {:alt-key "altKey"
+   :ctrl-key "ctrlKey"
+   :duration "duration"
+   :event "event"
+   :game "game"
+   :is-down "isDown"
+   :is-up "isUp"
+   :key-code "keyCode"
+   :on-down "onDown"
+   :on-hold-callback "onHoldCallback"
+   :on-hold-context "onHoldContext"
+   :on-up "onUp"
+   :repeats "repeats"
+   :shift-key "shiftKey"
+   :time-down "timeDown"
+   :time-up "timeUp"})
+
+(def key-set-properties
+  {:alt-key "altKey"
+   :ctrl-key "ctrlKey"
+   :duration "duration"
+   :game "game"
+   :is-down "isDown"
+   :is-up "isUp"
+   :key-code "keyCode"
+   :on-down "onDown"
+   :on-hold-callback "onHoldCallback"
+   :on-hold-context "onHoldContext"
+   :on-up "onUp"
+   :repeats "repeats"
+   :shift-key "shiftKey"
+   :time-down "timeDown"
+   :time-up "timeUp"})

@@ -1,0 +1,41 @@
+(ns phzr.impl.accessors.tween)
+
+(def tween-get-properties
+  {:chained-tween "chainedTween"
+   :current "current"
+   :game "game"
+   :is-paused "isPaused"
+   :is-running "isRunning"
+   :manager "manager"
+   :on-child-complete "onChildComplete"
+   :on-complete "onComplete"
+   :on-loop "onLoop"
+   :on-repeat "onRepeat"
+   :on-start "onStart"
+   :pending-delete "pendingDelete"
+   :properties "properties"
+   :repeat-counter "repeatCounter"
+   :reverse "reverse"
+   :target "target"
+   :time-scale "timeScale"
+   :timeline "timeline"
+   :total-duration "totalDuration"})
+
+(def tween-set-properties
+  {:chained-tween "chainedTween"
+   :game "game"
+   :is-paused "isPaused"
+   :is-running "isRunning"
+   :manager "manager"
+   :on-child-complete "onChildComplete"
+   :on-complete "onComplete"
+   :on-loop "onLoop"
+   :on-repeat "onRepeat"
+   :on-start "onStart"
+   :properties "properties"
+   :repeat-counter "repeatCounter"
+   :reverse "reverse"
+   :target "target"
+   :time-scale "timeScale"
+   :timeline "timeline"
+   :total-duration "totalDuration"})

@@ -1,0 +1,37 @@
+(ns phzr.impl.accessors.pixi.webgl-sprite-batch)
+
+(def webgl-sprite-batch-get-properties
+  {:blend-modes "blendModes"
+   :colors "colors"
+   :current-base-texture "currentBaseTexture"
+   :current-batch-size "currentBatchSize"
+   :default-shader "defaultShader"
+   :dirty "dirty"
+   :drawing "drawing"
+   :indices "indices"
+   :last-index-count "lastIndexCount"
+   :positions "positions"
+   :shaders "shaders"
+   :size "size"
+   :sprites "sprites"
+   :textures "textures"
+   :vert-size "vertSize"
+   :vertices "vertices"})
+
+(def webgl-sprite-batch-set-properties
+  {:blend-modes "blendModes"
+   :colors "colors"
+   :current-base-texture "currentBaseTexture"
+   :current-batch-size "currentBatchSize"
+   :default-shader "defaultShader"
+   :dirty "dirty"
+   :drawing "drawing"
+   :indices "indices"
+   :last-index-count "lastIndexCount"
+   :positions "positions"
+   :shaders "shaders"
+   :size "size"
+   :sprites "sprites"
+   :textures "textures"
+   :vert-size "vertSize"
+   :vertices "vertices"})

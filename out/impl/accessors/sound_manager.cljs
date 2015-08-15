@@ -1,0 +1,31 @@
+(ns phzr.impl.accessors.sound-manager)
+
+(def sound-manager-get-properties
+  {:channels "channels"
+   :connect-to-master "connectToMaster"
+   :context "context"
+   :game "game"
+   :mute "mute"
+   :no-audio "noAudio"
+   :on-mute "onMute"
+   :on-sound-decode "onSoundDecode"
+   :on-un-mute "onUnMute"
+   :on-volume-change "onVolumeChange"
+   :touch-locked "touchLocked"
+   :using-audio-tag "usingAudioTag"
+   :using-web-audio "usingWebAudio"
+   :volume "volume"})
+
+(def sound-manager-set-properties
+  {:channels "channels"
+   :connect-to-master "connectToMaster"
+   :context "context"
+   :game "game"
+   :mute "mute"
+   :no-audio "noAudio"
+   :on-mute "onMute"
+   :on-sound-decode "onSoundDecode"
+   :on-un-mute "onUnMute"
+   :on-volume-change "onVolumeChange"
+   :touch-locked "touchLocked"
+   :volume "volume"})

@@ -1,0 +1,31 @@
+(ns phzr.impl.accessors.pixi.render-texture)
+
+(def render-texture-get-properties
+  {:base-texture "baseTexture"
+   :crop "crop"
+   :frame "frame"
+   :height "height"
+   :is-tiling "isTiling"
+   :no-frame "noFrame"
+   :renderer "renderer"
+   :requires-re-tint "requiresReTint"
+   :requires-update "requiresUpdate"
+   :resolution "resolution"
+   :trim "trim"
+   :valid "valid"
+   :width "width"})
+
+(def render-texture-set-properties
+  {:base-texture "baseTexture"
+   :crop "crop"
+   :frame "frame"
+   :height "height"
+   :is-tiling "isTiling"
+   :no-frame "noFrame"
+   :renderer "renderer"
+   :requires-re-tint "requiresReTint"
+   :requires-update "requiresUpdate"
+   :resolution "resolution"
+   :trim "trim"
+   :valid "valid"
+   :width "width"})

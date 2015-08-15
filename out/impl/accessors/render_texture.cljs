@@ -1,0 +1,37 @@
+(ns phzr.impl.accessors.render-texture)
+
+(def render-texture-get-properties
+  {:base-texture "baseTexture"
+   :crop "crop"
+   :frame "frame"
+   :game "game"
+   :height "height"
+   :is-tiling "isTiling"
+   :key "key"
+   :no-frame "noFrame"
+   :renderer "renderer"
+   :requires-re-tint "requiresReTint"
+   :requires-update "requiresUpdate"
+   :resolution "resolution"
+   :trim "trim"
+   :type "type"
+   :valid "valid"
+   :width "width"})
+
+(def render-texture-set-properties
+  {:base-texture "baseTexture"
+   :crop "crop"
+   :frame "frame"
+   :game "game"
+   :height "height"
+   :is-tiling "isTiling"
+   :key "key"
+   :no-frame "noFrame"
+   :renderer "renderer"
+   :requires-re-tint "requiresReTint"
+   :requires-update "requiresUpdate"
+   :resolution "resolution"
+   :trim "trim"
+   :type "type"
+   :valid "valid"
+   :width "width"})

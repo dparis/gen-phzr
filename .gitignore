@@ -10,4 +10,3 @@ pom.xml.asc
 .hgignore
 .hg/
 phaser.ext.js
-/out

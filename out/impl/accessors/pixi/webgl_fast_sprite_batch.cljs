@@ -1,0 +1,35 @@
+(ns phzr.impl.accessors.pixi.webgl-fast-sprite-batch)
+
+(def webgl-fast-sprite-batch-get-properties
+  {:current-base-texture "currentBaseTexture"
+   :current-batch-size "currentBatchSize"
+   :current-blend-mode "currentBlendMode"
+   :drawing "drawing"
+   :index-buffer "indexBuffer"
+   :indices "indices"
+   :last-index-count "lastIndexCount"
+   :matrix "matrix"
+   :max-size "maxSize"
+   :render-session "renderSession"
+   :shader "shader"
+   :size "size"
+   :vert-size "vertSize"
+   :vertex-buffer "vertexBuffer"
+   :vertices "vertices"})
+
+(def webgl-fast-sprite-batch-set-properties
+  {:current-base-texture "currentBaseTexture"
+   :current-batch-size "currentBatchSize"
+   :current-blend-mode "currentBlendMode"
+   :drawing "drawing"
+   :index-buffer "indexBuffer"
+   :indices "indices"
+   :last-index-count "lastIndexCount"
+   :matrix "matrix"
+   :max-size "maxSize"
+   :render-session "renderSession"
+   :shader "shader"
+   :size "size"
+   :vert-size "vertSize"
+   :vertex-buffer "vertexBuffer"
+   :vertices "vertices"})

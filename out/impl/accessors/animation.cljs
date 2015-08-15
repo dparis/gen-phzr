@@ -1,0 +1,42 @@
+(ns phzr.impl.accessors.animation)
+
+(def animation-get-properties
+  {:current-frame "currentFrame"
+   :delay "delay"
+   :enable-update "enableUpdate"
+   :frame "frame"
+   :frame-total "frameTotal"
+   :game "game"
+   :is-finished "isFinished"
+   :is-paused "isPaused"
+   :is-playing "isPlaying"
+   :kill-on-complete "killOnComplete"
+   :loop "loop"
+   :loop-count "loopCount"
+   :name "name"
+   :on-complete "onComplete"
+   :on-loop "onLoop"
+   :on-start "onStart"
+   :on-update "onUpdate"
+   :paused "paused"
+   :speed "speed"})
+
+(def animation-set-properties
+  {:current-frame "currentFrame"
+   :delay "delay"
+   :enable-update "enableUpdate"
+   :frame "frame"
+   :game "game"
+   :is-finished "isFinished"
+   :is-paused "isPaused"
+   :is-playing "isPlaying"
+   :kill-on-complete "killOnComplete"
+   :loop "loop"
+   :loop-count "loopCount"
+   :name "name"
+   :on-complete "onComplete"
+   :on-loop "onLoop"
+   :on-start "onStart"
+   :on-update "onUpdate"
+   :paused "paused"
+   :speed "speed"})
