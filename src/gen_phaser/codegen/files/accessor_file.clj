@@ -1,8 +1,8 @@
-(ns gen-phaser.codegen.files.accessor-file
+(ns gen-phzr.codegen.files.accessor-file
   (:require [cljfmt.core :as cfmt]
-            [gen-phaser.codegen.forms.constants :as fc]
-            [gen-phaser.codegen.forms.properties :as fp]
-            [gen-phaser.util :as u]))
+            [gen-phzr.codegen.forms.constants :as fc]
+            [gen-phzr.codegen.forms.properties :as fp]
+            [gen-phzr.util :as u]))
 
 (defn ^:private build-ns
   [class-name]

@@ -1,8 +1,8 @@
-(ns gen-phaser.codegen.files.src-file
+(ns gen-phzr.codegen.files.src-file
   (:require [cljfmt.core :as cfmt]
             [cuerdas.core :as str]
-            [gen-phaser.codegen.forms.function :as ff]
-            [gen-phaser.util :as u]))
+            [gen-phzr.codegen.forms.function :as ff]
+            [gen-phzr.util :as u]))
 
 (def ^:private core-fn-names
   (into (set (map str (keys (ns-publics 'clojure.core))))

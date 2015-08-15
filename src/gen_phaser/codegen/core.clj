@@ -1,13 +1,13 @@
-(ns gen-phaser.codegen.core
+(ns gen-phzr.codegen.core
   (:require [cheshire.core :as c]
             [cljfmt.core :as cfmt]
             [clojure.java.io :as io]
             [cuerdas.core :as str]
-            [gen-phaser.codegen.files.accessor-file :as faf]
-            [gen-phaser.codegen.files.src-file :as fsf]
-            [gen-phaser.codegen.files.extend-all-file :as feaf]
-            [gen-phaser.codegen.files.test-all-file :as ftaf]
-            [gen-phaser.util :as u]))
+            [gen-phzr.codegen.files.accessor-file :as faf]
+            [gen-phzr.codegen.files.src-file :as fsf]
+            [gen-phzr.codegen.files.extend-all-file :as feaf]
+            [gen-phzr.codegen.files.test-all-file :as ftaf]
+            [gen-phzr.util :as u]))
 
 
 (defn ^:private build-data

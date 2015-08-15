@@ -1,7 +1,7 @@
-(ns gen-phaser.codegen.forms.constants
+(ns gen-phzr.codegen.forms.constants
   (:require [cljfmt.core :as cfmt]
             [cuerdas.core :as str]
-            [gen-phaser.util :as u]))
+            [gen-phzr.util :as u]))
 
 
 (defn ^:private build-keyword-name-map

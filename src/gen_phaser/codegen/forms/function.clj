@@ -1,7 +1,7 @@
-(ns gen-phaser.codegen.forms.function
+(ns gen-phzr.codegen.forms.function
   (:require [cljfmt.core :as cfmt]
             [cuerdas.core :as str]
-            [gen-phaser.util :as u]))
+            [gen-phzr.util :as u]))
 
 
 (def ^:private class-param-template

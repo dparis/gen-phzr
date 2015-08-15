@@ -1,4 +1,4 @@
-(ns gen-phaser.util
+(ns gen-phzr.util
   (:require [camel-snake-kebab.core :as csk]
             [cuerdas.core :as str]))
 

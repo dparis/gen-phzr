@@ -1,10 +1,10 @@
-(ns gen-phaser.codegen.files.extend-all-file
+(ns gen-phzr.codegen.files.extend-all-file
   (:require [cljfmt.core :as cfmt]
             [cuerdas.core :as str]
-            [gen-phaser.codegen.forms.constants :as fc]
-            [gen-phaser.codegen.forms.extend :as fe]
-            [gen-phaser.codegen.forms.properties :as fp]
-            [gen-phaser.util :as u]))
+            [gen-phzr.codegen.forms.constants :as fc]
+            [gen-phzr.codegen.forms.extend :as fe]
+            [gen-phzr.codegen.forms.properties :as fp]
+            [gen-phzr.util :as u]))
 
 
 (def ^:private extend-blacklist

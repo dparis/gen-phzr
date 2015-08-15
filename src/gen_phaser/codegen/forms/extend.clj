@@ -1,6 +1,6 @@
-(ns gen-phaser.codegen.forms.extend
+(ns gen-phzr.codegen.forms.extend
   (:require [cljfmt.core :as cfmt]
-            [gen-phaser.util :as u]))
+            [gen-phzr.util :as u]))
 
 (defn ^:private set-properties?
   [ps]

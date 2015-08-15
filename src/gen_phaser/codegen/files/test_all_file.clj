@@ -1,7 +1,7 @@
-(ns gen-phaser.codegen.files.test-all-file
+(ns gen-phzr.codegen.files.test-all-file
   (:require [cljfmt.core :as cfmt]
             [cuerdas.core :as str]
-            [gen-phaser.util :as u]))
+            [gen-phzr.util :as u]))
 
 (defn build-test-file
   [export-data]

@@ -1,10 +1,10 @@
-(ns gen-phaser.core
+(ns gen-phzr.core
   (:require [camel-snake-kebab.core :as csk]
             [cljfmt.core :as cfmt]
             [clojure.java.io :as io]
             [cuerdas.core :as str]
-            [gen-phaser.codegen.core :as cg]
-            [gen-phaser.util :as u])
+            [gen-phzr.codegen.core :as cg]
+            [gen-phzr.util :as u])
   (:gen-class))
 
 (defn -main
