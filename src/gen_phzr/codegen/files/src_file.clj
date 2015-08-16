@@ -1,6 +1,7 @@
 (ns gen-phzr.codegen.files.src-file
   (:require [cljfmt.core :as cfmt]
             [cuerdas.core :as str]
+            [gen-phzr.codegen.forms.constants :as fc]
             [gen-phzr.codegen.forms.function :as ff]
             [gen-phzr.util :as u]))
 
@@ -54,5 +55,8 @@
                  "\n\n\n"
                  (if constructor-str
                    (str constructor-str "\n\n\n")
+                   "")
+                 (if-not (empty? (:constants class-data))
+                   (str (fc/gen-const-fn class-name) "\n\n\n")
                    "")
                  (str/join "\n\n" function-strs)))}))
